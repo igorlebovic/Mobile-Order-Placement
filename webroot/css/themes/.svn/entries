@@ -1,0 +1,28 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/webroot/css/themes
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-03T05:37:23.861564Z
+26
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+apple
+dir
+
+nooch
+dir
+
+chipotle
+dir
+
+jqt
+dir
+

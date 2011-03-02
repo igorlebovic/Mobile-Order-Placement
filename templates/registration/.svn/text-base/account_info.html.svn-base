@@ -1,0 +1,24 @@
+{% load checkout_tags %}
+{% load catalog_tags %}
+
+<div id="account-info">
+    <div class="toolbar">
+        <h1>Account Info</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <form id="billing-info" method="post" action="http://{{ domain_name }}/accounts/account_info_result/{{ venue_id }}/">
+        <ul class="edgetoedge">
+	    {% stripped_form_table_row form.email %}
+	    {% stripped_form_table_row form.phone %}
+	    {% stripped_form_table_row form.billing_name %}
+	    {% stripped_form_table_row form.billing_address_1 %}
+	    {% stripped_form_table_row form.billing_address_2 %}
+	    {% stripped_form_table_row form.billing_city %}
+	    {% stripped_form_table_row form.billing_state %}
+	    {% stripped_form_table_row form.billing_zip %}
+	    {% stripped_form_table_row form.billing_country %}	    
+	    <li><a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Save Information</a></li>
+        </ul>
+    </form>
+</div>

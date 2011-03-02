@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/69/templates/catalog
+END
+show_category.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/skipola3/!svn/ver/125/templates/catalog/show_category.html
+END
+show_product.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/skipola3/!svn/ver/125/templates/catalog/show_product.html
+END
+product_review.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/skipola3/!svn/ver/37/templates/catalog/product_review.html
+END
+tag_cloud.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/skipola3/!svn/ver/37/templates/catalog/tag_cloud.html
+END
+place.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/skipola3/!svn/ver/131/templates/catalog/place.html
+END
+place_ajax.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/skipola3/!svn/ver/131/templates/catalog/place_ajax.html
+END
+tag_link.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/skipola3/!svn/ver/37/templates/catalog/tag_link.html
+END
+venue_search_result.json
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/skipola3/!svn/ver/117/templates/catalog/venue_search_result.json
+END
+tag.html
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/skipola3/!svn/ver/37/templates/catalog/tag.html
+END
+show_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/skipola3/!svn/ver/125/templates/catalog/show_list.html
+END

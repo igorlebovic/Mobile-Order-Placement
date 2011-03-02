@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Speeqe</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function(){
+		$("input#test").click(function() {
+			var data = jQuery.parseJSON("(" + {{ result }} + ")");
+			for(i = 0; i < 3; i++)
+			{
+				document.getElementById("zone").innerHTML += data.features[i].created + "<br>";
+			}
+
+		});
+	});
+    </script>
+  </head>
+  <body>
+  	<div id="zone">{{ result }}</div>
+  	<input type='button' id="test" value='Change Text'/>
+  </body>
+</html>

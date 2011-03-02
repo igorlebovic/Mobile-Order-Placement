@@ -1,0 +1,34 @@
+{% load catalog_filters %}
+{% load catalog_tags %}
+
+<div id="manageorder">
+    <div class="toolbar">
+        <h1>Finalize Order</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+	<li class="sep">Payment:</li>
+    </ul>    
+    <form id="product-{{ p.slug }}" action="http://{{ domain_name }}/merchant/pos2/1/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<a style="color:white;text-decoration:none;" href="#" id="finalize_order" name="{{ customer_jid }}" class="submit">Confirm Payment Received</a>
+	    </li>
+	</ul>
+    </form>
+    <ul class="edgetoedge">
+        <li class="sep">Order details:</li>
+    </ul>
+    {% if cart_items2_3_accept %}
+        {% for item in cart_items2_3_accept %}
+                <ul class="edgetoedge">
+                    <li>{{ item.name }} {{ item.quantity }} x {{ item.price|currency }} = {{ item.total|currency }}</li>
+                </ul>
+	{% endfor %}
+    {% else %}
+        <ul class="edgetoedge">
+            <li>The order is empty.</li>
+        </ul>
+    {% endif %}
+</div>

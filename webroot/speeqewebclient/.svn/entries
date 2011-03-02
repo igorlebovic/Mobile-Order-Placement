@@ -1,0 +1,55 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/webroot/speeqewebclient
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-09-26T01:22:17.610706Z
+55
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3d9eadb-11b5-4226-93e5-e54cb0732d21
+
+test_client.html
+file
+
+
+
+
+2010-08-01T23:05:00.000000Z
+d7d94a8076af61453c574834f63e904d
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+client.html
+file
+
+
+
+
+2010-08-01T23:05:00.000000Z
+bc36651283772bab0f7bf49b3ecaec88
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+scripts
+dir
+

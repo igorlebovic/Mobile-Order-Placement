@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/skipola3/!svn/ver/69/checkout
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/37/checkout/admin.py
+END
+authnet.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/37/checkout/authnet.py
+END
+urls.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/37/checkout/urls.pyc
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/126/checkout/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/skipola3/!svn/ver/37/checkout/__init__.py
+END
+google_checkout.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/skipola3/!svn/ver/37/checkout/google_checkout.py
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/85/checkout/__init__.pyc
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/37/checkout/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/96/checkout/models.py
+END
+checkout.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/126/checkout/checkout.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/126/checkout/urls.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/105/checkout/forms.py
+END
+models.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/85/checkout/models.pyc
+END

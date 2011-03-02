@@ -1,0 +1,55 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/webroot/js/jqcouch
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3d9eadb-11b5-4226-93e5-e54cb0732d21
+
+jqcouch.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+b6f95675fea5958d26dd056dece3b341
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+testsuite
+dir
+
+jqcouch.src.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+b09360ef7747aca8963b11d53054e269
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+

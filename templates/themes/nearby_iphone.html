@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Skipola</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="/css/jqtouch/jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="/css/themes/jqt/theme.css">
+        <script type="text/javascript" src="/js/jqtouch/jquery.1.3.2.min.js"></script>
+        <script type="text/javascript" src="/js/jqtouch/jqtouch.js"></script>
+        <script type="text/javascript" src="/js/jqtouch/jqt.location.js"></script>
+        <script type="text/javascript" src="/js/jqtouch/jqt.autotitles.js"></script>
+        <script type="text/javascript">
+            var jQT = $.jQTouch({
+                icon: '/images/jqtouch.png',
+                statusBar: 'black'
+            });
+            
+            $(function(){
+                function setDisplay(text) {
+                    $('.info').empty().append(text)
+                }
+                
+                // We pass "updateLocation" a callback function,
+                // to run once we have the coordinates.
+                // We also set it to a variable, so we can know
+                // right away if it's working or not
+                var lookup = jQT.updateLocation(function(coords){
+                    if (coords) {
+                        setDisplay('Latitude: ' + coords.latitude + '<br />Longitude: ' + coords.longitude);
+                    } else {
+                        setDisplay('Device not capable of geo-location.');
+                    }
+                });
+
+                if (lookup) {
+                    setDisplay('Looking up location&hellip;');
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <div class="toolbar">
+                <h1>[Nearby Places]</h1>
+            </div>
+            <div class="info"></div>
+        </div>
+    </body>
+</html>

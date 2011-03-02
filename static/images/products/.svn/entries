@@ -1,0 +1,22 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/static/images/products
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+main
+dir
+
+thumbnails
+dir
+

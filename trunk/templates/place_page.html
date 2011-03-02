@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>{{ placename }}</title>
+        <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+
+<!-- taken from autologinclient.html -->
+
+{% load splib %}
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/firebug/firebug.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/client.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/util.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/scaleimage.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/jquery.form.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/jquery.ui.min.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/strophe.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/anonymous.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/b64.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/sha1.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/md5.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/avatar.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/chat.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/rosteritem.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/app.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/messageview.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/chatroomview.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/rosteritemview.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/statusview.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/roomconfigview.js"></script>
+{% ifnotequal theme "iphone" %}
+<script type="text/javascript" src="/speeqewebclient/scripts/dashboard.js"></script>
+<script type="text/javascript" src="/speeqewebclient/scripts/helpdialog.js"></script>
+{% endifnotequal %}
+<script type="text/javascript" src="/speeqewebclient/scripts/local_settings.js"></script>
+
+   <script type="text/javascript">
+      var app= new Speeqe.Application();
+      var client = new Speeqe.Client();
+      client.init();
+
+      function getCred()
+      {
+	   {% if room %}
+	   app.setChatroom("{{ room }}");
+	   {% endif %}
+{% if username %}
+           //var cred_url = 'https://{% current_domain %}/client/';
+	   //it seems ssl will cause a cross site error
+	   var cred_url = '/client/';
+	   jQuery.get(cred_url,{cred:'1'},
+	      function(data) {
+	           app.run('{{username}}',
+	                   data);
+	      });
+
+{% else %}
+           app.run();
+{% endif %}
+	
+           return;
+
+      }
+
+      getCred();
+
+    </script>
+
+<!-- original place_page code continued -->
+
+        <style type="text/css" media="screen">@import "/css/home.css";</style>
+        <style type="text/css" media="screen">@import "/css/home-extended.css";</style>
+        <script type="text/javascript" src="/js/googlemaps.js"></script>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/json2.js"></script>
+        <script type="text/javascript" src="/js/place_page.js"></script>
+    </head>
+    <body onload="init()">
+
+        <!-- #start The Search / Menu Drop-Down -->
+	<div id="wptouch-menu" class="dropper"> 
+            <div id="wptouch-search-inner">
+                <form method="get" id="searchform" action="http://skipola.com/">
+                    <input type="text" value="Search&hellip;" onfocus="if (this.value == 'Search&hellip;') {this.value = ''}" name="s" id="s" /> 
+                    <input name="submit" type="hidden" tabindex="5" value="Search"  />
+                </form>
+            </div>
+            <div id="wptouch-menu-inner">
+                <ul>
+                    <li><a href="" onclick="window.location='http://skipola.com/place/' + '{{ placename }}' + '/'">Close</a></li>
+                </ul>
+            </div>
+            <div id="layer1"  class="menu-item">
+                <div id="layer1_handle">			
+                    Login As Another User
+                </div>
+                <div id="layer1_content">
+                    <form id="layer1_form" method="post" action="/accounts/ajax_login/">
+                        <div>
+                            <div>
+                                    <div class="leftinput">Login:</div>
+                                    <input class="rightinput" type="text" id="username" name="username" />
+                            </div>
+                            <div>
+                                    <div class="leftinput">Password:</div>
+                                    <input class="rightinput" type="password" id="password" name="password" />
+                            </div>
+                        </div>
+                        <input id="layer1_form_submit" type="submit" value="login" onclick="$.post('/accounts/ajax_login/', { username: $('#username').val(), password: $('#password').val() } );" />
+                    </form>
+                    <div class='error' id='form_message' ></div>
+                </div>
+            </div>  
+	</div>
+
+        <!-- #continued code from geoapi-wnm -->
+        <a id="homeButton" class="button" href="http://www.skipola.com">Home</a>
+        <a id="mapButton" class="button" href="" onclick="javascript:show_menu()">Menu</a>
+        <h1 id="pageTitle"></h1>
+        <div id="online" class="following">
+          <ul id="roster_item">
+            <li id="rosteritemtemplate" style="display: none;">
+              <div class="useronline">
+                <!--User Avatar -->
+                <img id="onlineavatar" alt="displaynick" src="/avatar-service/lookup/?sha1=f2f8ab835b10d66f9233518d1047f3014b3857cf" />
+                <div class="rostername">
+                  <span id="roster_name" class="roster_user_name">
+                  </span><span class="roster_user_at">@</span><span id="roster_user_domain" class="roster_user_domain">speeqe.com</span>
+                </div>
+              </div>
+	      <div id="rosteritemvcardtemplate" class="rostervcard" style="display: none;">
+	          <div id="vcard_name"></div>
+	          <div id="vcard_url"></div>		  
+		  <div id="vcard_email"></div>		  
+		  <div id="vcard_desc"></div>		  
+	      </div>
+              <div class="clear"></div>
+            </li>
+          </ul>
+        </div>
+        <ul id="vertical_list" title={{ placename }} selected="true">
+            <li>
+            	<a class="vertical" href="" onclick="window.location='about.php'">{{ auth_name }}
+		(<span id="status_disconnected">disconnected</span>
+		<span id="status_authentication_failed">authentication failed</span>
+		<span id="status_connect_failed">connection failed</span>
+		<span id="status_connected"><img src="/images/default_theme/connected.png" alt="connected" />connected</span>
+		<span id="chat_joining_room">Joining Room.....</span>
+		<span id="status_authenticating">authenticating..</span>
+		<span id="send_chat_message"></span>)
+		</a>
+            </li>
+        </ul>
+        <div id="map" title="Map">
+            <div style="position:relative; width: 320px; height: 419px;">
+               <div id="map_canvas" style="width: 320px; height: 419px;">
+               </div>
+            </div>
+        </div>
+        <ul id="results" title="Search Results">
+        </ul>
+
+  </body>
+</html>

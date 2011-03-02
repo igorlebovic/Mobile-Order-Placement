@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/skipola3/!svn/ver/69/catalog/templatetags
+END
+catalog_tags.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/skipola3/!svn/ver/128/catalog/templatetags/catalog_tags.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/skipola3/!svn/ver/37/catalog/templatetags/__init__.py
+END
+catalog_filters.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/skipola3/!svn/ver/37/catalog/templatetags/catalog_filters.py
+END

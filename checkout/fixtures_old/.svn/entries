@@ -1,0 +1,28 @@
+8
+
+dir
+37
+http://skipola3.svn.beanstalkapp.com/skipola3/checkout/fixtures
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+initial_data.json
+file
+
+
+
+
+2010-08-27T04:26:40.000000Z
+e5aaa152cb79039603e490d814b8f959
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+

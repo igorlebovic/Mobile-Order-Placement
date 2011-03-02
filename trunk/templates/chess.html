@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Tic-tac-toe</title>
+    
+    <link rel='stylesheet' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/cupertino/jquery-ui.css'>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js'></script>
+    <script src='/js/chess/strophe.js'></script>
+    <script src='/js/chess/flXHR.js'></script>
+    <script src='/js/chess/strophe.flxhr.js'></script>
+
+    <link rel='stylesheet' href='/css/chess/chess.css'>
+    <script src='/js/chess/chess.js'></script>
+    <script src='/js/chess/referee.js'></script>
+    <script src='/js/chess/board.js'></script>
+    
+	<script type="text/javascript">
+	// increase the default animation speed to exaggerate the effect
+	$.fx.speeds._default = 1000;
+	$(function() {
+		$('#dialog').dialog({
+			autoOpen: false,
+			show: 'blind',
+			hide: 'explode',
+			width: '800'
+		});
+		
+		$('#opener').click(function() {
+			$('#dialog').dialog('open');
+			$( ".selector" ).dialog( "option", "width", 800 );
+			return false;
+		});
+	});
+	</script>
+    
+  </head>
+  <body>
+    <h1>Tic-tac-toe</h1>
+
+<div class="demo">
+<div id="dialog" title="Instructions">
+	<p style="font-size=10pt;">Once you see the "Invite a Friend" button, send your opponent an email invitation.<br><br>If the email doesn't come through (which I am hearing is currently often the case with this game), copy the link that shows up after clicking on the "Invite a Friend" button and let your opponent open that from their own browser.<br><br>Once they start their own session using your link, you should soon see a button "Start Game." Enjoy!</p>
+</div>
+<button id="opener">Read Instructions</button>
+</div><!-- End demo -->
+    
+    <div id='game' class='hidden'>
+      <div class='buttons'>
+        <input id='resign' class='button' type='button' 
+               value='resign' disabled='disabled'>
+        <input id='leave' class='button' type='button' 
+               value='leave' disabled='disabled'>
+      </div>
+
+      <div id='board-area'>
+        <canvas id='board' width='300' height='300'>
+        </canvas>
+        <div id='board-status'></div>
+      </div>
+
+      <div id='chat'>
+        <div id='messages'>
+        </div>
+        <input type='text' id='input'>
+      </div>
+    </div>
+
+    <div id='log'>
+    </div>
+
+
+
+
+    <div id='browser'>
+      <div class='buttons'>
+        <input id='disconnect' class='button hidden' type='button' 
+               value='disconnect' disabled='disabled'>
+        <input id='wait' class='button hidden' type='button' 
+               value='wait' disabled='disabled'>
+      </div>
+
+      <p>Creating the XMPP environment...</p>
+      <hr>
+      <table id='waiting'>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <table id='games' class='hidden'>
+        <thead>
+          <tr>
+            <th>X</th>
+            <th>O</th>
+            <th>Room</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+</html>

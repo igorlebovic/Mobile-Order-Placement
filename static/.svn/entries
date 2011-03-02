@@ -1,0 +1,55 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/static
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+css.css
+file
+
+
+
+
+2010-08-27T04:26:39.000000Z
+138cf8911b051b718cdba06194a41459
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+scripts.js
+file
+
+
+
+
+2010-08-27T04:26:39.000000Z
+499f3aef1268731d15f18de6e0c0323f
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+images
+dir
+
+jquery-1.3.1.min.js
+file
+
+
+
+
+2010-08-27T04:26:39.000000Z
+5d4c7816890f3308da6126f5fa65c979
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+

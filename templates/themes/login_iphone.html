@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <title>Skipola</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <link type="text/css" rel="stylesheet" media="screen" href="/css/themes/jqt/theme.css">
+    </head>
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>Account</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+<!-- speeqe start -->
+            <form id='loginform' class="form" method="post" action=".">
+                <h2>Username:</h2>
+                <ul class="edit rounded">
+                    <li><input type="text" name="username" placeholder="Enter login" id="id_username" class="rightinput" /></li>
+                </ul>
+                <h2>Password</h2>
+                <ul class="edit rounded">
+                    <li><input type="password" name="password" placeholder="Enter password" id="id_password" class="rightinput" /></li>
+                </ul>
+                <input id="layer1_form_submit" type="submit" value="login" />
+                <input type="hidden" name="next" value="{{ next|urlencode }}">
+            </form>
+<!-- speeqe end -->
+        </div>
+  </body>
+</html>

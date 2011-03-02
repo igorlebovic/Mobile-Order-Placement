@@ -1,0 +1,107 @@
+{% load catalog_filters %}
+{% load catalog_tags %}
+
+<div id="modify-order">
+    <div class="toolbar">
+        <h1>Edit Order</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <div class="info">
+  You can update the quantity or cancel your order.
+    </div>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+  <li>{{ p.name }}</li>
+  <li class="sep">Cancel Your Order:</li>
+    </ul>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Remove" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Cancel Your Order</a>
+            </li>   
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li class="sep">Update Quantity:</li>
+            <li>
+                <input type="hidden" name="quantity" value="1" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 1</a>
+            </li>
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="quantity" value="2" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 2</a>
+            </li>
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="quantity" value="3" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 3</a>
+            </li>
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="quantity" value="4" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 4</a>
+            </li>
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="quantity" value="5" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 5</a>
+            </li>
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="quantity" value="6" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 6</a>
+            </li>
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="quantity" value="7" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 7</a>
+            </li>
+        </ul>
+    </form>
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <input type="hidden" name="quantity" value="8" />
+                <input type="hidden" name="item_id" value="{{ item_id }}" />
+                <input type="hidden" name="submit" value="Update" />
+                <a style="color:white;text-decoration:none;" href="#" class="submit">Change to 8</a>
+            </li>
+        </ul>
+    </form>
+</div>

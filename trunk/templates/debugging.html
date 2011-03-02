@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Speeqe</title>
+    
+{% load splib %}
+<script type="text/javascript" src="/js/jquery.min.js">
+</script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/firebug/firebug.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/client.js"></script>        
+    <script type="text/javascript" src="/speeqewebclient/scripts/util.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/scaleimage.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/jquery.form.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/jquery.ui.min.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/strophe.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/anonymous.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/b64.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/sha1.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/md5.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/avatar.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/chat.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/rosteritem.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/app.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/messageview.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/chatroomview.js"></script>    
+    <script type="text/javascript" src="/speeqewebclient/scripts/rosteritemview.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/statusview.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/roomconfigview.js"></script>
+    <script type="text/javascript" src="/speeqewebclient/scripts/local_settings.js"></script>            
+   <script type="text/javascript">
+      var app= new Speeqe.Application();
+      var client = new Speeqe.Client();
+      client.init();
+
+      function getCred()
+      {
+	   {% if room %}
+	   app.setChatroom("{{ room }}");
+	   {% endif %}
+{% if username %}
+           //var cred_url = 'https://{% current_domain %}/client/';
+	   //it seems ssl will cause a cross site error
+	   var cred_url = '/client/';
+	   jQuery.get(cred_url,{cred:'1'},
+	      function(data) {
+	           app.run('{{username}}',
+	                   data);
+	      });
+
+{% else %}
+           app.run();
+{% endif %}
+	
+           return;
+
+      }
+
+      getCred();
+
+    </script>
+  </head>
+  <body>
+          <strong id="login_username"></strong>
+          <br />
+          <span id="status_disconnected"><a href="javascript:this.location.reload();"><img src="/images/default_theme/disconnected.png" alt="disconnected" border="0" /></a>disconnected</span>
+          <span id="status_authentication_failed">authentication failed</span>
+          <span id="status_connect_failed">connection failed</span>
+          <span id="status_connected"><img src="/images/default_theme/connected.png" alt="connected" />connected</span>
+          <div id="chat_joining_room">Joining Room.....</div>
+          <span id="status_authenticating">authenticating..</span>
+          <br>
+          <textarea id="send_chat_message" cols="40" rows="2"> type and hit enter </textarea>
+  </body>
+</html>

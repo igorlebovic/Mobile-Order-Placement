@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Speeqe</title>{% block getcred %}{% endblock %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <link type="text/css" rel="stylesheet" media="screen" href="/css/place.css">
+    <script type="text/javascript" src="/js/place.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="sidebar">
+        <!--
+        <div id="configure_room_form">
+
+
+          <form action="">
+          </form>
+        </div>
+         -->
+        <div id="user-greeting" class="menu-1">
+           <p>Hello <strong id="login_username"></strong></p>
+        </div>
+      </div>
+
+      <div id="chat">
+        <div id="chatWindow_chatpane" class='direction-up'>
+          <div id="post_template" style="display: none;">
+            <!-- This div is used to post messages. They will always show in the
+                 chatWindow_chatpan div. Leave it hidden. -->
+            <div id="chatpane_post" class="post">
+              <div class="postmark">
+                <div class="message_block">
+                    <p class="user-message"><span id='messagepost'>
+                      <!--The message begins -->
+                      <!--The message ends -->
+                    </span><br />
+                    <small id="message_time_stamp" class="date">
+                    01/01/08
+                    <!--Message Time Stamp (don't change id)-->
+                    </small>
+                    </p>
+                    <p class="user-info">
+                    <span id="message_user_name" class="message_user_name">
+                    <!--User name -->
+
+                    </span> 
+                    </p>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+
+<div id="online" class="following menu-item" style="display:none">
+         <h2>speeqers</h2>
+         <ul id="roster_item">
+            <!--This li is used to list users in the room. Leave it hidden. -->
+            <li id="rosteritemtemplate" style="display: none;">
+              <div class="useronline">
+                <!--User Avatar -->
+                <img id="onlineavatar" alt="displaynick" src="/avatar-service/lookup/?sha1=f2f8ab835b10d66f9233518d1047f3014b3857cf" />
+
+                  <div class="rostername">
+                    <span id="roster_user_name"></span>@<span id="roster_user_domain">speeqe.com</span>
+                  </div>
+                </div>
+            </li>
+          </ul>
+    </div>  
+
+    <div id="layer1"  class="menu-item" style="display:none">
+      <div id="layer1_handle">      
+      Login As Another User
+    </div>
+      <div id="layer1_content">
+    <form id="layer1_form" method="post" action="/accounts/ajax_login/">
+      <div>
+        <div>
+          <div class="leftinput">Login:</div>
+          <input class="rightinput" type="text" name="username" />
+        </div>
+        <div>
+          <div class="leftinput">Password:</div>
+          <input class="rightinput" type="password" name="password" />
+        </div>
+        </div>
+        <input id="layer1_form_submit" type="submit" value="login" />
+    </form>
+    <div class='error' id='form_message' ></div>
+    </div>
+    </div>  
+
+    <div id="current-room" class="menu-item">
+        <h1>Current Room: <span id="roomname"></span>.<span id="roomdomainname"></span>(<span id="room_topic"></span>)</h1>
+    </div>
+
+<div id="speeqe-menu">
+<div id="chatstatus">
+        <div id="connection-message">
+            <span id="status_disconnected"><a href="javascript:this.location.reload();"><img src="http://bedrichrios.com/iphone_test/disconnected.gif" alt="connected" width="42px" height="28px" /></a>
+            disconnected</span>
+
+            <span id="status_authentication_failed"><img src="http://bedrichrios.com/iphone_test/authentication_failed.gif" alt="connected" width="30px" height="28px" /></span>
+            <span id="status_connect_failed"><img src="http://bedrichrios.com/iphone_test/connect_failed.gif" alt="connected" width="30px" height="28px" /></span>
+            <span id="status_connected"><img src="http://bedrichrios.com/iphone_test/connected.gif" alt="connected" width="30px" height="28px" /></span>
+            <div id="chat_joining_room">
+            Joining Room.....</div>     
+            <span id="status_authenticating">authenticating..</span>
+         </div>
+    </div>
+          <ul id="dropdown-menu">
+            <li id="speeqers" title="Current Speeqers"><a href="#"><span>Speeqers</span></a></li>
+            <li id="room" title="Chat Room"><a href="#"><span>Settings</span></a></li>
+            <li id="log-in-out" title="Log in/out"><a href="#"><span>Login</span></a></li>
+          </ul>
+</div>
+
+<div id="chatbox">
+          <textarea id="send_chat_message" cols="30" rows="1">type and hit enter </textarea>
+<a href="#speeqe-menu" id="info"><span>Info</span></a>
+<a href="#post" id="send_chat"><span>Post</span></a>
+</div>
+      </div>
+  </body>
+</html>

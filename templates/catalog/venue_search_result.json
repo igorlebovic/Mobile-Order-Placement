@@ -1,0 +1,15 @@
+{
+    "entity": [
+{% for v in venues %}
+        {
+            "view.listing": {
+                "address": ["{{ v.3 }}", "{{ v.4 }}", "{{ v.5 }}"],
+                "name": "{{ v.2 }}"
+            },
+            "guid": "{{ v.0 }}-{{ v.1 }}",
+            "name": "{{ v.2 }}",
+	    "id": "{{ v.0 }}"
+        },
+{% endfor %}
+    ]
+}

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/skipola3/!svn/ver/2/trunk/xmpp
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/2/trunk/xmpp/__init__.py
+END
+muc.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/skipola3/!svn/ver/2/trunk/xmpp/muc.py
+END

@@ -1,0 +1,33 @@
+{% load catalog_filters %}
+{% load merchant_tags %}
+
+<div id="home">
+    <div class="toolbar">
+        <h1>The Register</h1>
+        <a class="button back" href="#">Back</a>
+        {% merchant_right_button venue_id domain_name %}
+    </div>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Pending Orders:</li>
+    </ul>
+    <span class="orders_1" style="margin-top:-2px;">
+	<ul class="edgetoedge">
+	    <li>Loading...</li>
+	</ul>
+    </span>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Accepted Orders:</li>
+    </ul>
+    <ul class="edgetoedge orders_2" style="margin-top:-2px;">
+	<li>Loading...</li>
+    </ul>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Orders Waiting for Pick-up:</li>
+    </ul>
+    <ul class="edgetoedge orders_3" style="margin-top:-2px;">
+	<li>Loading...</li>
+    </ul>
+    <table id='waiting'><tbody></tbody></table>
+</div>
+
+<textarea id="send_chat_message"></textarea>

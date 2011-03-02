@@ -1,0 +1,60 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/static/images
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+apress_cover.gif
+file
+
+
+
+
+2010-08-27T04:26:40.000000Z
+879c2ea44b9db80ba661fe8013878a6f
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+has-props
+
+products
+dir
+
+fig 2-2 screenshot_files
+dir
+
+fig 2-2 screenshot.html
+file
+
+
+
+
+2010-08-27T04:26:40.000000Z
+010cfb8a0c4a76f19e3ae09cdbc79bf6
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+favicon.ico
+file
+
+
+
+
+2010-08-27T04:26:40.000000Z
+3dba8d0a8e78b5e7857a2d4858021142
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+has-props
+

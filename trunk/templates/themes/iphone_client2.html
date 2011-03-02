@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml"> 
+
+  <head>
+    <title>{{ room }}</title>{% block getcred %}{% endblock %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+    <style type="text/css" media="screen">@import "/css/combined-iphone.css";</style>
+    <script type="text/javascript" src="/js/googlemaps.js"></script>
+    <script type="text/javascript" src="/js/json2.js"></script>
+    <script type="text/javascript" src="/js/room.js"></script>
+    <script type="text/javascript" src="/js/iphone_client.js"></script>
+  </head>
+
+
+<body onload="init()"> 
+
+<!-- <div id="dashboard" class="menu-item" style="display:none">  -->
+    <a id="homeButton" class="button" href="#vertical_list">What's Near Me?</a>
+    <a id="mapButton" class="button" href="" onclick="javasript:show_map_results()">Map</a>
+    <h1 id="pageTitle"></h1>
+    <ul id="vertical_list" class="iphonestyling" title="What's Near Me?" selected="true">
+    </ul>
+    <div id="map" title="Map">
+      <div style="position:relative; width: 320px; height: 419px;">
+       <div id="map_canvas" style="width: 320px; height: 419px;">
+       </div>
+      </div>
+    </div>
+    <ul id="results" class="iphonestyling" title="Search Results">
+    </ul>
+<!-- </div> -->
+ 
+      <div id="chat">
+        <div id="chatWindow_chatpane" class='direction-up'> 
+          <div id="post_template" style="display: none;"> 
+            <!-- This div is used to post messages. They will always show in the
+                 chatWindow_chatpan div. Leave it hidden. --> 
+            <div id="chatpane_post" class="post"> 
+              <div class="postmark"> 
+                <div class="message_block"> 
+                    <p class="user-message"><span id='messagepost'> 
+                      <!--The message begins --> 
+                      <!--The message ends --> 
+                    </span><br /> 
+                    <small id="message_time_stamp" class="date"> 
+                    01/01/08
+                    <!--Message Time Stamp (don't change id)--> 
+                    </small> 
+                    </p> 
+                    <p class="user-info"> 
+                    <span id="message_user_name" class="message_user_name"> 
+                    <!--User name --> 
+ 
+                    </span> 
+                    </p> 
+ 
+                </div> 
+              </div> 
+            </div> 
+ 
+          </div> 
+        </div> 
+ 
+    </div> 
+ 
+    <div id="online" class="following menu-item" style="display:none"> 
+         <h1>speeqers</h1> 
+         <ul id="roster_item"> 
+            <!--This li is used to list users in the room. Leave it hidden. --> 
+           	<li id="rosteritemtemplate" style="display: none;"> 
+             	<div class="useronline"> 
+                <!--User Avatar --> 
+                <img id="onlineavatar" alt="displaynick" src="/avatar-service/lookup/?sha1=f2f8ab835b10d66f9233518d1047f3014b3857cf" /> 
+ 
+               		<div class="rostername"> 
+                  	<span id="roster_user_name"></span>@<span id="roster_user_domain">speeqe.com</span> 
+                	</div> 
+              	</div> 
+            </li> 
+          </ul> 
+    </div>  
+ 
+    <div id="current-room" class="menu-item"  style="display:none"> 
+        <h1>Current Room</h1> 
+    </div> 
+ 
+    <div id="layer1"  class="menu-item" style="display:none"> 
+        <h1>Login As Another User</h1> 
+	  	<div id="layer1_content"> 
+		<form id="layer1_form" method="post" action="/accounts/ajax_login/"> 
+			<div> 
+				<div> 
+					<div class="leftinput">Login:</div> 
+					<input class="rightinput" type="text" name="username" /> 
+				</div> 
+				<div> 
+					<div class="leftinput">Password:</div> 
+					<input class="rightinput" type="password" name="password" /> 
+				</div> 
+		  	</div> 
+		  	<input id="layer1_form_submit" type="submit" value="login" /> 
+		</form> 
+		<div class='error' id='form_message' ></div> 
+		</div> 
+    </div>  
+ 
+    <div id="chatbox"> 
+        <textarea id="send_chat_message" cols="30" rows="1">type and hit enter </textarea> 
+<!--       <a href="#speeqe-menu" id="info" class="in-use"><span class="in-use" style="top: 72px; left: 838px;"></span></a> --> 
+        <a href="#post" id="send_chat"><span>Post</span></a> 
+    </div> 
+
+  <div id="speeqe-menu"> 
+	<div id="chatstatus"> 
+	    <div id="connection-message"> 
+		<span id="status_disconnected"><a href="javascript:this.location.reload();"><img src="http://bedrichrios.com/iphone_test/disconnected.gif" alt="connected" width="42px" height="28px" /></a> 
+		disconnected</span> 
+		<span id="status_authentication_failed"><img src="http://bedrichrios.com/iphone_test/authentication_failed.gif" alt="connected" width="30px" height="28px" /></span> 
+		<span id="status_connect_failed"><img src="http://bedrichrios.com/iphone_test/connect_failed.gif" alt="connected" width="30px" height="28px" /></span> 
+		<span id="status_connected"><img src="http://skipola.com/images/default_theme/connected.png" alt="connected" width="30px" height="28px" /></span> 
+		<div id="chat_joining_room">Joining Room.....</div>	    
+		<span id="status_authenticating">authenticating..</span> 
+	   </div> 
+	</div> 
+	<ul id="dropdown-menu"> 
+	<li id="dashboard-button" title="Dashboard"><a href="#"><span>Dashboard</span></a></li> 
+	<li id="speeqers-button" title="Current Speeqers"><a href="#"><span>Speeqers</span></a></li> 
+	<li id="room-button" title="Room Name"><a href="#"><span>Settings</span></a></li> 
+	<li id="log-in-out-button" title="Log in/out"><a href="#"><span>Login</span></a></li> 
+	<li id="chat-button" title="Chat"><a href="#"><span>Chat</span></a></li> 
+	</ul> 
+    </div> 
+ 
+</body> 
+</html> 
+ 

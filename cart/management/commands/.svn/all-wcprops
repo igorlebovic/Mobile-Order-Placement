@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/skipola3/!svn/ver/37/cart/management/commands
+END
+delete_old_carts.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/skipola3/!svn/ver/37/cart/management/commands/delete_old_carts.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/skipola3/!svn/ver/37/cart/management/commands/__init__.py
+END

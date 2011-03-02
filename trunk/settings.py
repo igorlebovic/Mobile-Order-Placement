@@ -1,0 +1,1 @@
+/etc/speeqe/settings.py

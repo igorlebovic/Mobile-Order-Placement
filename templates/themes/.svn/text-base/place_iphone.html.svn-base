@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <title>Skipola</title>{% block getcred %}{% endblock %}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <link type="text/css" rel="stylesheet" media="screen" href="/css/place.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="/css/jqtouch/jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="/css/themes/jqt/theme.css">
+        <script type="text/javascript" src="/js/jqtouch/jqtouch.js"></script>
+        <script type="text/javascript" src="/js/place.js"></script>
+    </head>
+  <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>Skipola</h1>
+                <a class="back" href="http://{{ domain_name }}" target="_blank">Places</a>
+                <a class="button flip" href="#account">Account</a>
+            </div>
+            <ul class="rounded">
+		<li class="arrow"><a href="#order">Place an Order</a></li>
+		<li class="arrow"><a href="#chatscreen">Chat</a></li>
+		<li class="arrow"><a href="#people">People</a></li>
+            </ul>
+        </div>
+        <div id="chatscreen">
+            <div class="toolbar">
+                <h1>Chat</h1>
+                <a class="back" href="#">Back</a>
+                <a class="button flip" href="#account">Account</a>
+            </div>
+<!-- speeqe start -->
+            <div id="wrapper">
+                <div id="chat">
+                    <div id="chatWindow_chatpane" class='direction-up'>
+                        <div id="post_template" style="display: none;">
+                          <!-- This div is used to post messages. They will always show in the
+                               chatWindow_chatpan div. Leave it hidden. -->
+                            <div id="chatpane_post" class="post">
+                                <div class="postmark">
+                                    <div class="message_block">
+                                        <p class="user-message">
+                                            <span id='messagepost'>
+                                                <!--The message begins -->
+                                                <!--The message ends -->
+                                            </span><br />
+                                            <small id="message_time_stamp" class="date">
+                                                01/01/08
+                                                <!--Message Time Stamp (don't change id)-->
+                                            </small>
+                                        </p>
+                                        <p class="user-info">
+                                            <span id="message_user_name" class="message_user_name">
+                                                <!--User name -->
+                                            </span> 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div id="chatbox">
+                    <textarea id="send_chat_message" cols="30" rows="1">type and hit enter </textarea>
+                    <a href="#speeqe-menu" id="info"><span>Info</span></a>
+                    <a href="#post" id="send_chat"><span>Post</span></a>
+                </div>
+            </div>
+<!-- speeqe end -->
+        </div>
+        <div id="people">
+            <div class="toolbar">
+                <h1>People</h1>
+                <a class="back" href="#">Back</a>
+		<a class="button flip" href="#account">Account</a>
+            </div>	    
+	    <span id="online">
+<!-- speeqe start -->
+		<ul id="roster_item" class="rounded">
+		    <!--This li is used to list users in the room. Leave it hidden. -->
+		    <li id="rosteritemtemplate" class="arrow" style="display: none;">
+			<div class="useronline">
+			<!--User Avatar -->
+			    <img id="onlineavatar" alt="displaynick" src="/avatar-service/lookup/?sha1=f2f8ab835b10d66f9233518d1047f3014b3857cf" />
+			    <div class="rostername">
+				<span id="roster_user_name"></span>@<span id="roster_user_domain">speeqe.com</span>
+			    </div>
+			</div>
+		    </li>
+		</ul>
+<!-- speeqe end -->
+	    </span>
+        </div>
+        <div id="order">
+            <div class="toolbar">
+                <h1>Order</h1>
+                <a class="back" href="#">Back</a>
+                <a class="button flip" href="#account">Account</a>
+            </div>
+            <ul class="rounded">
+                <li class="arrow"><a href="#drinks">Drinks</a></li>
+		<li class="arrow"><a href="#appetizers">Appetizers</a></li>
+		<li class="arrow"><a href="#entrees">Entrees</a></li>
+		<li class="arrow"><a href="#desserts">Desserts</a></li>
+            </ul>
+        </div>
+        <div id="drinks">
+            <div class="toolbar">
+                <h1>Drinks</h1>
+                <a class="back" href="#">Back</a>
+                <a class="button flip" href="#account">Account</a>
+            </div>
+            <ul class="rounded">
+                <li class="arrow"><a href="#ajax_post">Mojito</a></li>
+            </ul>
+	</div>
+        <div id="mojito">
+            <div class="toolbar">
+                <h1>Mojito</h1>
+                <a class="back" href="#">Back</a>
+                <a class="button flip" href="#account">Account</a>
+            </div>
+            <ul class="rounded">
+                <li><a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Buy This Drink</a></li>
+            </ul>
+            <div class="info" style="font-weight: normal;"> 
+		A Mojito is traditionally made of five ingredients: white rum, sugar (traditionally sugar cane juice), lime, sparkling water and mint. The original Cuban recipe uses spearmint or yerba buena, a mint variety very popular in the island. Its combination of sweetness, refreshing citrus and mint flavors are intended to complement the potent kick of the rum, and have made this clear highball a popular summer drink.
+            </div> 	    
+	</div>
+
+	<form id="ajax_post" action="http://jqtouch.com/preview/demos/main/ajax_post.php" method="POST" class="form"> 
+            <div class="toolbar"> 
+                <h1>Post Demo</h1> 
+                <a class="back" href="#">Ajax</a> 
+            </div> 
+            <ul class="rounded"> 
+                <li><input type="text" name="zip" value="" placeholder="Zip Code" /></li> 
+            </ul> 
+            <a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Submit</a> 
+        </form> 
+
+        <div id="account">
+            <div class="toolbar">
+                <h1>Account</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+<!-- speeqe start -->
+    <form id="layer1_form" method="post" action="http://{{ domain_name }}/accounts/ajax_login/">
+        <h2>Login</h2>
+        <ul class="edit rounded">
+      <li><input type="text" name="username" placeholder="Enter login" id="login" class="rightinput" /></li>
+        </ul>
+        <h2>Password</h2>
+        <ul class="edit rounded">
+      <li><input type="password" name="password" placeholder="Enter password" id="password" class="rightinput" /></li>
+        </ul>
+        <input id="layer1_form_submit" type="submit" value="login" />
+    </form>
+    <div class='error' id='form_message' ></div>
+<!-- speeqe end -->
+        </div>
+
+  </body>
+</html>

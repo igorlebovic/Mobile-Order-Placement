@@ -1,0 +1,50 @@
+{% load catalog_filters %}
+{% load catalog_tags %}
+
+{
+    "response_1": [
+        {% for item in cart_items2_1 %}
+            {
+                "orders": "{{ item.name }} {{ item.quantity }} x {{ item.price|currency }} = {{ item.total|currency }}",
+                "item_slug": "{{ item.slug }}",
+                "item_id": "{{ item.id }}",
+                "cart_id": "{{ item.cart_id }}",
+                "xmpp_jid": "{{ item.xmpp_jid }}",
+                "customer_orders": "{{ item.total_order }} item{{ item.total_order|pluralize:",s" }} from {{ item.cart_id }}"
+            },
+        {% endfor %}
+    ],
+    "response_2": [
+        {% for item in cart_items2_2 %}
+            {
+                "orders": "{{ item.name }} {{ item.quantity }} x {{ item.price|currency }} = {{ item.total|currency }}",
+                "item_slug": "{{ item.slug }}",
+                "item_id": "{{ item.id }}",
+                "cart_id": "{{ item.cart_id }}",
+                "xmpp_jid": "{{ item.xmpp_jid }}",
+                "customer_orders": "{{ item.total_order }} item{{ item.total_order|pluralize:",s" }} from {{ item.cart_id }}"
+            },
+        {% endfor %}
+    ],
+    "response_3": [
+        {% for item in cart_items2_3 %}
+            {
+                "orders": "{{ item.name }} {{ item.quantity }} x {{ item.price|currency }} = {{ item.total|currency }}",
+                "item_slug": "{{ item.slug }}",
+                "item_id": "{{ item.id }}",
+                "cart_id": "{{ item.cart_id }}",
+                "xmpp_jid": "{{ item.xmpp_jid }}",
+                "customer_orders": "{{ item.total_order }} item{{ item.total_order|pluralize:",s" }} from {{ item.cart_id }}"
+            },
+        {% endfor %}
+    ],
+    "response_4": [
+        {% for order in orders %}
+            {
+                "get_absolute_url": "{{ order.id }}",
+                "id": "{{ order.id }}",
+                "date": "{{ order.date|date }}"
+            },
+        {% endfor %}
+    ]
+}

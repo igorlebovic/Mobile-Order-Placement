@@ -1,0 +1,324 @@
+ul
+{
+  margin: 0;
+  padding: 0;
+}
+
+#speeqe-menu
+{
+  padding: 10px 20px;
+  background: url("/images/iphone_theme/header_gradient.png") top left repeat-x #444;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #333;
+}
+
+#connection-message
+{
+  display: block;
+  float: left;
+  width: 49px;
+  border-right: 1px dotted #333;
+}
+
+#connection-message img 
+{
+  margin-right: 10px;
+}
+
+ul#dropdown-menu
+{
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+}
+
+ul#dropdown-menu li 
+{ 
+  float: left; 
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+ul#dropdown-menu li a
+{
+  display: block;
+  float: left;
+  width: 30px;
+  height: 28px;
+  margin: 0 15px 0 0;
+}
+
+ul#dropdown-menu li a span
+{
+  position: absolute;
+  left: -9999px;
+}
+
+ul#dropdown-menu li#dashboard-button a     
+{ 
+  background: url('/images/iphone_theme/chat.png') top left no-repeat; 
+}
+
+ul#dropdown-menu li#chat-button a     
+{ 
+  background: url('/images/iphone_theme/chat.png') top left no-repeat; 
+}
+
+ul#dropdown-menu li#speeqers-button a 
+{ 
+  background: url('/images/iphone_theme/speeqers.png') top left no-repeat; 
+}
+
+ul#dropdown-menu li#room-button a     
+{ 
+  background: url('/images/iphone_theme/room.png') top left no-repeat; 
+}
+
+ul#dropdown-menu li#log-in-out-button a     
+{ 
+  background: url('/images/iphone_theme/login.png') top left no-repeat; 
+}
+
+.clicked
+{
+  background: url('/images/iphone_theme/close.png') top left no-repeat !important;
+}
+
+#chat
+{
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 100%;
+  background: #fcfcfc;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#chat .post
+{
+  margin: 15px 0;
+}
+
+#chat .post .date
+{
+  font-size: .65em;
+  color: #668822;
+  line-height: 1.5em;
+}
+
+#chat .current_user .date
+{
+  color: #444;
+}
+
+#chat .post p
+{
+  font-size: .85em;
+  line-height: 1.6em;
+  margin: 0 0 .5em 0;
+}
+
+#chat .post img 
+{
+  margin-bottom: 5px;
+  height: auto;
+}
+
+#chat .post p.user-message
+{
+  background: url("/images/iphone_theme/bubble_gradient.png") top left repeat-x #bbdd55;
+  border: 1px solid #99bb33;
+  margin-bottom: 0;
+  padding: 5px;
+  width: auto;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  text-align: right;
+}
+
+#chat .current_user p.user-message
+{
+  background: url("/images/iphone_theme/bubble_gradient_2.png") top left repeat-x #777;
+  border: 1px solid #666;
+  text-align: left;
+  color: #fff;
+}
+
+#online .useronline
+{
+  padding: 10px 20px;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+  font-size: .8em;
+}
+
+#online .useronline .rostername
+{
+  margin: 0;
+  padding: 10px 40px;
+  color: #223366;
+}
+
+#online .useronline img
+{
+  float: left;
+}
+
+#layer1 #layer1_handle
+{
+  padding: 10px 20px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+#layer1 #layer1_content
+{
+  padding: 10px 20px;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+#layer1 #layer1_content .leftinput
+{
+  margin-bottom: .5em;
+}
+
+#layer1 #layer1_content input
+{
+  margin-bottom: 10px;
+}
+
+#layer1 #layer1_handle a
+{
+  font-weight: bold;
+  text-decoration: none;
+  color: #223366;
+}
+
+#chat .post p.user-info 
+{
+   background: url("/images/iphone_theme/bubble_triangle.png") 400px top no-repeat; 
+   padding-top: 8px;
+   text-align: right;
+   color: #223366;
+}
+
+body[orient="portrait"] #chat .post p.user-info
+{
+   background: url("/images/iphone_theme/bubble_triangle.png") 240px top no-repeat; 
+} 
+
+body[orient="portrait"] #chat .current_user p.user-info,
+#chat .current_user p.user-info
+{
+   text-align: left;
+   background: url("/images/iphone_theme/bubble_triangle_2.png") 20px top no-repeat; 
+}
+
+body[orient="portrait"] #chat .post img
+{
+  max-width: 265px;
+}
+
+body[orient="landscape"] #chat .post img
+{
+  max-width: 425px;
+}
+
+#chat .post p span.message_user_name
+{
+  font-weight: bold;
+}
+
+#chatbox
+{
+  background: #ddd;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 20px;
+}
+
+#chatbox textarea
+{
+  border: 1px solid #aaa;
+  color: #555;
+  height: 18px;
+  float: left;
+  padding: 5px;
+}
+
+body[orient="portrait"] #chatbox textarea 
+{ 
+  width: 150px; 
+}
+
+body[orient="landscape"] #chatbox textarea 
+{ 
+  width: 310px; 
+}
+
+#chatbox a#info,
+#chatbox a#send_chat
+{
+  color: #fff;
+  font-size: .85em;
+  text-decoration: none;
+  float: right;
+  text-align: center;
+  margin-left: 10px;
+  display: block;
+  height: 30px;
+  border: none;
+}
+
+a#info
+{
+  background: url('/images/iphone_theme/info.png') top left no-repeat;
+  width: 30px;
+}
+
+a#info.in-use
+{
+  background: url('/images/iphone_theme/info_used.png') top left no-repeat;
+}
+
+a#send_chat
+{
+  background: url('/images/iphone_theme/post.png') top left no-repeat;
+  width: 60px;
+}
+
+a span
+{
+  position: absolute;
+  left: -9999px;
+}
+
+#speeqe-menu:after,
+#sidebar:after,
+#chatbox:after,
+.useronline:after
+{
+    content: ".";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+}
+
+* html #speeqe-menu,
+* html #sidebar,
+* html #chatbox,
+* html .useronline
+{
+	height: 1px;
+}
+
+#speeqe-menu,
+#sidebar,
+#chatbox,
+.useronline
+{ 
+  min-height: 1px; 
+}

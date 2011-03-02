@@ -1,0 +1,38 @@
+{% load catalog_filters %}
+{% load catalog_tags %}
+<div id="home">
+    <div class="toolbar">
+        <h1>Shopping Cart</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    {% if cart_items %}
+    <ul class="edgetoedge">    
+        <li class="sep">Remove or Change Quantity:</li>
+    </ul>
+        {% for item in cart_items %}
+            <form action="http://{{ domain_name }}/cart/modify_cart/{{ item.slug }}/" method="POST" class="form" style="margin-bottom:-2px;">
+                <ul class="edgetoedge">
+                    <input type="hidden" name="item_id" value="{{ item.id }}" />
+                    <input type="hidden" name="quantity" value="{{ item.quantity }}" />
+                    <li><a href="#" class="submit">{{ item.name }} {{ item.quantity }} x {{ item.price|currency }} = {{ item.total|currency }}</a></li>
+                </ul>
+            </form>
+        {% endfor %}
+        {% else %}
+        <ul class="edgetoedge">
+            <li>Your cart is empty.</li>
+        </ul>
+    {% endif %}
+    <ul class="edgetoedge">
+        <li>Cart Subtotal: {{ cart_subtotal|currency }}</li>
+    {% if cart_items %}    
+    <form action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" method="POST" class="form" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <input type="hidden" name="submit" value="cash" />
+            <li><a href="#" style="margin:0 10px;color:rgba(0,0,0,.9)" class="submit whiteButton">Checkout</a></li>
+        </ul>
+    </form>
+    {% endif %}
+    </ul>
+</div>

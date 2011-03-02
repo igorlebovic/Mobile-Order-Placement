@@ -1,0 +1,12 @@
+{% load catalog_tags %}
+
+<div id="account-info">
+    <div class="toolbar">
+        <h1>{{ form_title }}</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <ul class="edgetoedge">
+        <li>{{ form_message }}</li>
+    </ul>
+</div>

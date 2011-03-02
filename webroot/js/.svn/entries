@@ -1,0 +1,139 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/webroot/js
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-10-10T03:19:38.359323Z
+69
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3d9eadb-11b5-4226-93e5-e54cb0732d21
+
+jquery.json-1.1.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+0b3231112373b6fbe94232c7fc392099
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+place.js
+file
+
+
+
+
+2010-08-29T20:55:23.000000Z
+162081cfdb4582dab877f24b6950714b
+2010-08-08T22:31:55.393438Z
+29
+skipola3
+
+search.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+d9adffea2bc154eae7b2834564cae023
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+ext-touch
+dir
+
+index.js
+file
+131
+
+
+
+2010-12-08T19:04:23.000000Z
+3b3be5e93fcccf4ba22097fd82ce5ebc
+2011-01-01T16:44:39.647532Z
+131
+skipola3
+
+geoapi
+dir
+
+chess
+dir
+
+pngfix.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+920b62c01786676171acb3f830cae185
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+interface.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+60f10234180a9d43fce54cb2b511db8d
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+jqcouch
+dir
+
+jquery.form.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+de288a262f9dc7ce184eec3ffa5e4ff4
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+jquery.min.js
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+233898893e19f2aad95407abfc7a74fa
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+
+jqtouch
+dir
+

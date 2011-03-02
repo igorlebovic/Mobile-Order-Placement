@@ -1,0 +1,25 @@
+{% load catalog_tags %}
+{% load checkout_tags %}
+
+<div id="home">
+    <div class="toolbar">
+        <h1>Checkout</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <form id="billing-info" method="post" action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/">
+        <ul class="edgetoedge">
+	    {% stripped_form_table_row form.credit_card_type %}
+	    {% stripped_form_table_row form.credit_card_number %}
+	    {% stripped_form_table_row form.credit_card_expire_month %}
+	    {% stripped_form_table_row form.credit_card_expire_year %}
+	    {% stripped_form_table_row form.credit_card_cvv %}
+	    {% stripped_form_table_row form.billing_name %}
+	    {% stripped_form_table_row form.billing_zip %}
+	    {% stripped_form_table_row form.email %}
+	    {% stripped_form_table_row form.phone %}
+        </ul>
+	<input type="hidden" name="submit" value="credit_card" />
+	<a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Place Order</a>
+    </form>
+</div>

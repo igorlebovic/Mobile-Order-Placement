@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Helvetica;
+    background: #FFFFFF;
+    color: #000000;
+    overflow: hidden;
+    -webkit-text-size-adjust: none;
+}
+
+body > h1 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    color: #FFFFFF;
+    background: url(/images/img/iPhoneToolbar.png) #6d84a2 repeat-x;
+    border-bottom: 1px solid #2d3642;
+}
+
+body > div,
+body > form,
+body > ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 41px;
+    width: 100%;
+    min-height: 418px;
+    margin: 0;
+    padding: 0;
+}
+
+body > *[selected="true"] {
+    display: block;
+}
+
+ul.iphonestyling > li {
+    margin: 0;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 0;
+    background: url(/images/img/iPhoneArrow.png) no-repeat right center;
+    font-size: 20px;
+    list-style: none;
+}
+
+ul.iphonestyling > li > a {
+    display: block;
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    color: inherit;
+}
+
+a img {
+    border: none;
+}
+
+.clickable {
+    padding: 0px;
+    margin: 0px 0px 0px 8px;
+}
+
+.button {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    -webkit-border-image: url(/images/img/iPhoneButton.png) 0 5 0 5;
+    -webkit-border-radius: 0;
+    border-width: 0 5px 0 5px;
+    padding: 0;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-decoration: none;
+    background: none;
+}
+
+#homeButton {
+    /*display: none;*/
+    left: 6px;
+    right: auto;
+    -webkit-border-image: url(/images/img/iPhoneBackButton.png) 0 8 0 14;
+    border-width: 0 8px 0 14px;
+}
+
+.vertical {
+    font-weight: bold;
+}
+
+.entityName {
+    font-size: 14px;
+    color: #000;
+}
+
+.entityAddress {
+    font-size: 10px;
+    color: #6d84a2;
+}
+
+/*	pulse the location marker */
+@-webkit-keyframes pulse {
+	0% {
+		opacity: 1.0;
+	}
+	40% {
+		opacity: 0.25;
+	}
+	100% {
+		opacity: 1.0;
+	}
+}
+
+#map_canvas div[style*="/images/img/blue_dot_circle.png"] {
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+.infoWindow {
+    font-size: 12px;   
+}

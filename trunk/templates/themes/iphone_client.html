@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{{ room }}</title>{% block getcred %}{% endblock %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <style type="text/css" media="screen">@import "/css/iphone_client.css";</style>
+<!--    <style type="text/css" media="screen">@import "/css/room.css";</style> -->
+    <script type="text/javascript" src="/js/iphone_client.js"></script>
+<!--    <script type="text/javascript" src="/js/room.js"></script> -->
+    <script type="text/javascript" src="/js/googlemaps.js"></script>
+    <script type="text/javascript" src="/js/json2.js"></script>
+    
+	<!-- jonathanstark begin-->
+	<link type="text/css" rel="stylesheet" media="screen" href="/css/jqtouch/jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="/css/themes/jqt/theme.css">
+        <script type="text/javascript" src="/js/jqtouch/jquery.js"></script>
+        <script type="text/javascript" src="/js/jqtouch/jqtouch.js"></script>
+        <script type="text/javascript">
+            var jQT = $.jQTouch({
+                icon: 'kilo.png',
+                statusBar: 'black'
+            });
+        </script>
+	<!-- jonathanstark end-->
+
+  </head>
+  <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>{{ placename }}</h1>
+                <a class="button flip" href="#settings">Settings</a>
+            </div>
+            <ul class="edgetoedge">
+                <li class="arrow"><a href="#placeorder">Place an Order</a></li>
+                <li class="arrow"><a href="#about">Chat</a></li>
+            </ul>
+        </div>
+        <div id="about">
+            <div class="toolbar">
+                <h1>Chat</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <div>
+		
+
+      <div id="chat">
+        <div id="chatWindow_chatpane" class='direction-up'>
+          <div id="post_template" style="display: none;">
+            <!-- This div is used to post messages. They will always show in the
+                 chatWindow_chatpan div. Leave it hidden. -->
+            <div id="chatpane_post" class="post">
+              <div class="postmark">
+                <div class="message_block">
+                    <p class="user-message"><span id='messagepost'>
+                      <!--The message begins -->
+                      <!--The message ends -->
+                    </span><br />
+                    <small id="message_time_stamp" class="date">
+                    01/01/08
+                    <!--Message Time Stamp (don't change id)-->
+                    </small>
+                    </p>
+                    <p class="user-info">
+                    <span id="message_user_name" class="message_user_name">
+                    <!--User name -->
+                    </span> 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div id="chatbox">
+        <textarea id="send_chat_message" cols="30" rows="1">type and hit enter </textarea>
+<!--       <a href="#speeqe-menu" id="info" class="in-use"><span class="in-use" style="top: 72px; left: 838px;"></span></a> -->
+        <a href="#post" id="send_chat"><span>Post</span></a>
+    </div>
+
+    
+  <div id="speeqe-menu">
+  <div id="chatstatus">
+      <div id="connection-message">
+    <span id="status_disconnected"><a href="javascript:this.location.reload();"><img src="http://bedrichrios.com/iphone_test/disconnected.gif" alt="connected" width="42px" height="28px" /></a>
+    disconnected</span>
+    <span id="status_authentication_failed"><img src="http://bedrichrios.com/iphone_test/authentication_failed.gif" alt="connected" width="30px" height="28px" /></span>
+    <span id="status_connect_failed"><img src="http://bedrichrios.com/iphone_test/connect_failed.gif" alt="connected" width="30px" height="28px" /></span>
+    <span id="status_connected"><img src="http://skipola.com/images/default_theme/connected.png" alt="connected" width="30px" height="28px" /></span>
+    <div id="chat_joining_room">Joining Room.....</div>     
+    <span id="status_authenticating">authenticating..</span>
+     </div>
+  </div>
+  </div>
+
+
+
+
+
+		
+            </div>
+        </div>
+        <div id="settings">
+            <div class="toolbar">
+                <h1>Settings</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li><input placeholder="Budget" type="text" name="budget" id="budget" /></li>
+                    <li><input type="submit" class="submit" name="action" value="Save Changes" /></li>
+                </ul>
+            </form>
+        </div>
+
+
+</body>
+</html>

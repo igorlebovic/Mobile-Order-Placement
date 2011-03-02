@@ -1,0 +1,185 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/trunk
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-10-07T14:05:12.034919Z
+65
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3d9eadb-11b5-4226-93e5-e54cb0732d21
+
+manage.py
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+e3e98f6180694dd506859e3d4855aea3
+2010-03-21T13:45:40.328060Z
+2
+aerosmile2000
+has-props
+
+boshclient.py
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+20f4eb826818c2451e12e1b8b9bef9c0
+2010-04-03T01:50:39.933075Z
+5
+aerosmile2000
+
+webroot
+dir
+
+speeqe
+dir
+
+xmpp
+dir
+
+__init__.py
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2010-03-21T13:45:40.328060Z
+2
+aerosmile2000
+
+settings.py
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+3537a5d3ca6e7d088632f8ff6dd836ca
+2010-03-21T13:45:40.328060Z
+2
+aerosmile2000
+has-props
+
+
+svn:special
+
+helpers.py
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+1382d7ac7d7619cf07d9ffaef693c039
+2010-03-21T13:45:40.328060Z
+2
+aerosmile2000
+
+__init__.pyc
+file
+
+
+
+
+2010-10-04T20:00:49.000000Z
+f6f86d9df87c100f0f6b7fa4ff201dfc
+2010-10-07T14:05:12.034919Z
+65
+skipola3
+has-props
+
+settings.pyc
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+bfcee30a4b1a8df994e20c4b4a1ae13e
+2010-07-07T03:31:30.677222Z
+18
+aerosmile2000
+has-props
+
+templates
+dir
+
+avatars
+dir
+
+local_settings.py.dist
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+ec4fe0f149f36ba46394ffc5371064b1
+2010-03-21T13:45:40.328060Z
+2
+aerosmile2000
+
+images
+dir
+
+httpbclient.py
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+538318459016873c66b78f28853bd325
+2010-03-21T13:45:40.328060Z
+2
+aerosmile2000
+
+.htaccess_testing
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+1a525eb40b74a5889c1f27537b63b0aa
+2010-07-03T16:43:20.348013Z
+16
+aerosmile2000
+
+urls.py
+file
+
+
+
+
+2010-08-01T23:05:03.000000Z
+2bc022866a2de3440284f7564c6656c6
+2010-07-30T06:52:39.101548Z
+22
+aerosmile2000
+

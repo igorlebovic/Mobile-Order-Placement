@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/113/templates/merchant
+END
+pos.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/skipola3/!svn/ver/114/templates/merchant/pos.html
+END
+pos2.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/skipola3/!svn/ver/114/templates/merchant/pos2.html
+END
+manageorder.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/skipola3/!svn/ver/116/templates/merchant/manageorder.html
+END
+merchant_menu.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/skipola3/!svn/ver/131/templates/merchant/merchant_menu.html
+END
+manageorder2.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/skipola3/!svn/ver/115/templates/merchant/manageorder2.html
+END
+manageorder3.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/skipola3/!svn/ver/115/templates/merchant/manageorder3.html
+END
+merchant_home.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/skipola3/!svn/ver/131/templates/merchant/merchant_home.html
+END

@@ -1,0 +1,69 @@
+{% extends "merchant/merchant_home.html" %}
+{% load splib %}
+
+{% block getcred %}
+      <!--
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+      -->
+   <script type="text/javascript" src="/js/jqtouch/jquery.1.3.2.min.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/firebug/firebug.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/client_merchant.js"></script>        
+   <script type="text/javascript" src="/speeqewebclient/scripts/util.js"></script>    
+   <script type="text/javascript" src="/speeqewebclient/scripts/scaleimage.js"></script>    
+   <script type="text/javascript" src="/speeqewebclient/scripts/jquery.cookie.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/jquery.form.js"></script>    
+   <script type="text/javascript" src="/speeqewebclient/scripts/jquery.ui.min.js"></script>
+      <!--
+      <script type="text/javascript" src="/js/chess/strophe.js"></script>
+      -->
+   <script type="text/javascript" src="/speeqewebclient/scripts/strophe.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/anonymous.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/b64.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/sha1.js"></script>    
+   <script type="text/javascript" src="/speeqewebclient/scripts/md5.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/chat.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/app_merchant.js"></script>
+   <script type="text/javascript" src="/speeqewebclient/scripts/local_settings.js"></script>            
+
+   <script type="text/javascript">
+      var app = new Speeqe.Application();      
+      var client = new Speeqe.Client();
+      client.init();
+
+      function getCred() {
+	 {% if room %}
+//	    app.setChatroom("{{ room }}");
+	 {% endif %}
+	 {% if username %}
+	       //var cred_url = 'https://{% current_domain %}/client/';
+	       //it seems ssl will cause a cross site error
+	       var cred_url = '/client/{{ venue_id }}/';
+	       
+	       jQuery.get(cred_url,{cred:'1'},
+		  function(data) {
+		     app.run('{{ username }}', data);
+		  }
+	       );
+	 {% else %}
+	       app.run();
+	 {% endif %}
+	      
+         return;
+      }
+
+      getCred();
+
+   </script>
+   {% if venue_styling %}
+      {% if venue_id == "0" %}
+	 <link type="text/css" rel="stylesheet" media="screen" href="http://kangoria.com/css/themes/apple/theme.css">
+      {% endif %}
+      {% if venue_id == "1" %}
+	 <link type="text/css" rel="stylesheet" media="screen" href="http://kangoria.com/css/themes/nooch/theme.css">
+      {% endif %}
+      {% if venue_id == "2" %}
+	 <link type="text/css" rel="stylesheet" media="screen" href="http://kangoria.com/css/themes/chipotle/theme.css">
+      {% endif %}
+   {% endif %}
+   
+{% endblock %}

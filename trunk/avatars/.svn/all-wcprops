@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/skipola3/!svn/ver/65/trunk/avatars
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/2/trunk/avatars/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/skipola3/!svn/ver/2/trunk/avatars/__init__.py
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/skipola3/!svn/ver/65/trunk/avatars/__init__.pyc
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/2/trunk/avatars/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/skipola3/!svn/ver/2/trunk/avatars/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/skipola3/!svn/ver/2/trunk/avatars/urls.py
+END
+models.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/skipola3/!svn/ver/4/trunk/avatars/models.pyc
+END

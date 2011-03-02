@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/skipola3/!svn/ver/69/templates/cart
+END
+modify_cart.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/skipola3/!svn/ver/125/templates/cart/modify_cart.html
+END
+show_cart.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/skipola3/!svn/ver/126/templates/cart/show_cart.html
+END

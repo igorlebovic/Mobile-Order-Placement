@@ -1,0 +1,40 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/cart/management/commands
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+delete_old_carts.py
+file
+
+
+
+
+2010-08-30T00:29:04.000000Z
+5f93dff977f9fc840ccbced3c8c2f775
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+__init__.py
+file
+
+
+
+
+2010-08-27T04:26:41.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+

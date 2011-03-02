@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/skipola3/!svn/ver/69/accounts
+END
+urls.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/37/accounts/urls.pyc
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/122/accounts/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/skipola3/!svn/ver/37/accounts/__init__.py
+END
+profile.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/37/accounts/profile.py
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/85/accounts/__init__.pyc
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/122/accounts/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/65/accounts/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/122/accounts/urls.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/66/accounts/forms.py
+END
+models.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/85/accounts/models.pyc
+END

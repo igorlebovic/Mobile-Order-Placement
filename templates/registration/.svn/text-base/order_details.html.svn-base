@@ -1,0 +1,19 @@
+{% load catalog_filters %}
+{% load catalog_tags %}
+<div id="order-details">
+    <div class="toolbar">
+        <h1>Order Details</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <ul class="edgetoedge" style="margin-bottom:-2px;">
+	<li class="sep">Details for Order # {{ order.id }}:</li>
+    </ul>
+    {% for item in order_items %}
+	<form id="product" action="{{ item.get_absolute_url }}" method="POST" class="form" style="margin-bottom:-2px;">
+	    <ul class="edgetoedge">
+		<li><a href="#" class="submit">{{ item.name }} {{ item.quantity }} x {{ item.price|currency }} = {{ item.total|currency }}</a></li>
+	    </ul>
+	</form>
+    {% endfor %}
+</div>

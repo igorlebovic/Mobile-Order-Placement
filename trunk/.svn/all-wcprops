@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/skipola3/!svn/ver/65/trunk
+END
+manage.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/skipola3/!svn/ver/2/trunk/manage.py
+END
+boshclient.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/5/trunk/boshclient.py
+END
+local_settings.py.dist
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/skipola3/!svn/ver/2/trunk/local_settings.py.dist
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/skipola3/!svn/ver/2/trunk/__init__.py
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/skipola3/!svn/ver/2/trunk/settings.py
+END
+httpbclient.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/2/trunk/httpbclient.py
+END
+.htaccess_testing
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/skipola3/!svn/ver/16/trunk/.htaccess_testing
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/65/trunk/__init__.pyc
+END
+helpers.py
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/skipola3/!svn/ver/2/trunk/helpers.py
+END
+settings.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/18/trunk/settings.pyc
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/skipola3/!svn/ver/22/trunk/urls.py
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/skipola3/!svn/ver/69/templates
+END
+newtheme.html
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/skipola3/!svn/ver/24/templates/newtheme.html
+END
+autologinclient.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/skipola3/!svn/ver/129/templates/autologinclient.html
+END
+autologinclient_merchant.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/skipola3/!svn/ver/129/templates/autologinclient_merchant.html
+END
+listthemes.html
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/skipola3/!svn/ver/24/templates/listthemes.html
+END
+app_offline.html
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/skipola3/!svn/ver/37/templates/app_offline.html
+END
+500.html
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/37/templates/500.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/131/templates/index.html
+END
+404.html
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/37/templates/404.html
+END
+messagesearch.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/skipola3/!svn/ver/24/templates/messagesearch.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/skipola3/!svn/ver/129/templates/base.html
+END
+welcome.html
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/skipola3/!svn/ver/24/templates/welcome.html
+END

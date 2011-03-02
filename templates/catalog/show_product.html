@@ -1,0 +1,101 @@
+{% load catalog_filters %}
+{% load catalog_tags %}
+<div id="show-product">
+    <div class="toolbar">
+        <h1>{{ p.name }}</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <div class="info">
+	{{ p.description }}
+	<br /><br />
+	{% if p.sale_price %}
+		Was: <del>{{ p.old_price|currency }}</del>
+		<br />
+		Now: <span>{{ p.price|currency }}</span>
+	{% else %}
+		Price: <span>{{ p.price|currency }}</span>
+	{% endif %}
+    </div>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li class="sep">Add Quantity to Cart:</li>
+	    <li>
+		<input type="hidden" name="quantity" value="1" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 1</a>
+	    </li>
+	</ul>
+    </form>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<input type="hidden" name="quantity" value="2" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 2</a>
+	    </li>
+	</ul>
+    </form>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<input type="hidden" name="quantity" value="3" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 3</a>
+	    </li>
+	</ul>
+    </form>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<input type="hidden" name="quantity" value="4" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 4</a>
+	    </li>
+	</ul>
+    </form>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<input type="hidden" name="quantity" value="5" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 5</a>
+	    </li>
+	</ul>
+    </form>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<input type="hidden" name="quantity" value="6" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 6</a>
+	    </li>
+	</ul>
+    </form>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<input type="hidden" name="quantity" value="7" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 7</a>
+	    </li>
+	</ul>
+    </form>
+    <form action="http://{{ domain_name }}/cart/show_cart/{{ venue_id }}/" method="POST" class="form, cart" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+	    <li>
+		<input type="hidden" name="quantity" value="8" />
+		<input type="hidden" name="product_slug" value="{{ product_slug }}" />
+		<input type="hidden" name="submit" value="Add" />
+		<a style="color:white;text-decoration:none;" href="#" class="submit">Add 8</a>
+	    </li>
+	</ul>
+    </form>
+</div>

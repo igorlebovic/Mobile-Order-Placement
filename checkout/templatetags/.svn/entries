@@ -1,0 +1,52 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/checkout/templatetags
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-09-26T07:14:30.227817Z
+57
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3d9eadb-11b5-4226-93e5-e54cb0732d21
+
+__init__.py
+file
+
+
+
+
+2010-08-27T04:26:40.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2010-08-30T04:14:08.275164Z
+37
+skipola3
+
+checkout_tags.py
+file
+128
+
+
+
+2010-12-05T23:13:30.000000Z
+0576f6955ec7cbcadf5dfedf86e40c90
+2010-12-05T23:58:45.051057Z
+128
+skipola3
+

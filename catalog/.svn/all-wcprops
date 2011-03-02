@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/skipola3/!svn/ver/69/catalog
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/skipola3/!svn/ver/89/catalog/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/128/catalog/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/37/catalog/__init__.py
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/skipola3/!svn/ver/85/catalog/__init__.pyc
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/skipola3/!svn/ver/37/catalog/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/97/catalog/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/skipola3/!svn/ver/129/catalog/urls.py
+END
+forms.py
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/skipola3/!svn/ver/97/catalog/forms.py
+END
+models.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/85/catalog/models.pyc
+END

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <title>Skipola</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<link type="text/css" rel="stylesheet" media="screen" href="/css/jqtouch/jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="/css/themes/jqt/theme.css">
+        <script type="text/javascript" src="/js/jqtouch/jquery.1.3.2.min.js"></script>
+        <script type="text/javascript" src="/js/jqtouch/jqtouch.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
+    </head>
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>Skipola</h1>
+		{% if user.is_authenticated %}
+		  <a class="back" href="/accounts/logout/" target="_blank">Log Out</a>
+		{% endif %}				
+                <a class="button" href="http://{{ domain_name }}/accounts/login/?next=http://{{ domain_name }}/" target="_blank">Account</a>
+            </div>
+            <ul class="rounded">
+                <li class="arrow"><a href="#nearby">Nearby Places</a></li>
+                <li class="arrow"><a href="#address">Search by Address</a></li>
+		<li class="arrow"><a href="#name">Search by Name</a></li>
+                <li class="arrow"><a href="#ajax_post">Search by Name</a></li>
+            </ul>
+        </div>
+        <div id="nearby">
+            <div class="toolbar">
+                <h1>Nearby Places</h1>
+                <a class="back" href="#">Home</a>
+                <a class="button" href="#account">Account</a>
+            </div>
+            <div class="info" style="font-weight: normal;"> 
+            </div>
+            <ul id="vertical_list" class="rounded">
+            </ul>
+        </div>
+        <div id="places">
+            <div class="toolbar">
+                <h1>Results</h1>
+                <a class="back" href="#">Nearby</a>
+                <a class="button" href="#account">Account</a>
+            </div>
+            <ul id="results" class="rounded">
+            </ul>
+        </div>
+        <div id="account">
+            <div class="toolbar">
+                <h1>Account</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+<!-- speeqe start -->
+		<form id="layer1_form" method="post" action="http://{{ domain_name }}/accounts/ajax_login/">
+		    <h2>Login</h2>
+		    <ul class="edit rounded">
+			<li><input type="text" name="username" placeholder="Enter login" id="login" class="rightinput" /></li>
+		    </ul>
+		    <h2>Password</h2>
+		    <ul class="edit rounded">
+			<li><input type="password" name="password" placeholder="Enter password" id="password" class="rightinput" /></li>
+		    </ul>
+		    <input id="layer1_form_submit" type="submit" value="login" />
+		</form>
+		<div class='error' id='form_message' ></div>
+<!-- speeqe end -->
+        </div>
+        
+        <form id="ajax_post" action="http://jqtouch.com/preview/demos/main/ajax_post.php" method="POST" class="form"> 
+            <div class="toolbar"> 
+                <h1>Post Demo</h1> 
+                <a class="back" href="#">Ajax</a> 
+            </div> 
+            <ul class="rounded"> 
+                <li><input type="text" name="zip" value="" placeholder="Zip Code" /></li> 
+            </ul> 
+            <a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Submit</a> 
+        </form> 
+        
+    </body>
+</html>

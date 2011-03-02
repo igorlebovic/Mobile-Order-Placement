@@ -1,0 +1,114 @@
+/* login form from speeqewebclient */
+#layer1 #layer1_handle
+{
+  padding: 10px 20px;
+  background: #eee;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#layer1 #layer1_content
+{
+  padding: 10px 20px;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+#layer1 #layer1_content .leftinput
+{
+  margin-bottom: .5em;
+}
+
+#layer1 #layer1_content input
+{
+  margin-bottom: 10px;
+}
+
+#layer1 #layer1_handle a
+{
+  font-weight: bold;
+  text-decoration: none;
+  color: #223366;
+}
+
+/* drop-menu from wordpress */
+#wptouch-menu {
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+    display:none;
+}
+#wptouch-menu-inner img {
+    float: left;
+    position: relative;
+    bottom: 5px;
+    width: 28px;
+    padding-right: 10px;
+    right: 0;
+    padding-left: 10px;
+}
+.dropper {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #1b1b1b;
+    font-size:13px;
+    background-color:#fff;
+}
+.dropper ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+.dropper li {
+    margin:0;
+    background:url(core/core-images/arrow.png) no-repeat right center;
+    text-transform:capitalize;
+    border-bottom: 1px solid #E0E0E0;
+    background: url(/images/img/iPhoneArrow.png) no-repeat right center;
+    padding: 0;
+    text-align: left;
+}
+.dropper a {
+    font-size: 20px;
+    list-style: none;
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin: 0;
+    width: auto;
+    text-align: left;
+    clear: both;
+    font-weight:bold;
+}
+/*
+.dropper li:hover {
+    color:red;
+}
+*/
+#wptouch-search-inner {
+    border-top: 1px solid #4d4d4d;
+    border-bottom:1px solid #1d1d1d;
+    margin-top: -2px;
+    text-align: center;
+    height: 38px;
+    padding-top: 1px;
+    margin-top: 0;
+    background-color: #444444;
+    padding-bottom:1px;
+}
+#s {
+    -webkit-border-radius: 10px;
+    padding: 4px;
+    width: 90% ;
+    font-size: 13px;
+    color: #222;
+    margin-right:3px;
+    text-align:left;
+    margin-top:6px;
+    border:1px solid #1b1b1b;
+    font-weight: bold;
+}

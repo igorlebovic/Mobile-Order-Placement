@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/skipola3/!svn/ver/24/speeqe/test
+END
+TestXmppy.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/skipola3/!svn/ver/24/speeqe/test/TestXmppy.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/skipola3/!svn/ver/24/speeqe/test/__init__.py
+END
+TestHelpers.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/skipola3/!svn/ver/24/speeqe/test/TestHelpers.py
+END
+TestThemeModel.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/skipola3/!svn/ver/24/speeqe/test/TestThemeModel.py
+END
+TestThemeForm.py
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/skipola3/!svn/ver/24/speeqe/test/TestThemeForm.py
+END

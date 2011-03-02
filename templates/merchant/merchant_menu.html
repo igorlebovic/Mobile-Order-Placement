@@ -1,0 +1,70 @@
+{% load merchant_tags %}
+<div id="home">
+    <div class="toolbar">
+        <h1>{{ v.name }}</h1>
+    </div>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Incoming Orders:</li>
+    </ul>
+    <form id="categories" action="http://{{ domain_name }}/merchant/pos/{{ v.id }}/" method="POST" class="form" style="margin-top:-2px;">
+        <ul class="edgetoedge">
+            <li>
+                <a href="#" class="submit">Accept Orders</a>
+            </li>
+        </ul>
+    </form>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Account Details:</li>
+    </ul>
+    <form id="history" action="http://{{ domain_name }}/merchant/past_orders/{{ venue_id }}/" method="POST" class="form"  style="margin-top:-2px;">
+        <ul class="edgetoedge">
+            <li><a href="#" class="submit">Order History</a></li>
+        </ul>
+    </form>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li><a href="#myaccount">My Account</a></li>
+    </ul>
+</div>
+
+<textarea id="send_chat_message"></textarea>
+
+<div id="myaccount">
+    <div class="toolbar">
+        <h1>My Account</h1>
+        <a class="button back" href="#">Back</a>
+        {% merchant_right_button venue_id domain_name %}
+    </div>
+    <form id="logout" action="/accounts/logout" method="POST" class="form" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li class="sep"><label for="username">Logged in as: {{ username }}</label></li>
+            <li><a href="#" class="submit">Log Out</a></li>
+        </ul>
+    </form>
+    <ul class="edgetoedge">
+        <li><a href="#password_change">Password Change</a></li>
+    </ul>
+    <form id="logout" action="/accounts/account_info/{{ v.id }}/" method="POST" class="form" style="margin-top:-2px;">
+        <ul class="edgetoedge">
+            <li><a href="#" class="submit">Account Information</a></li>
+        </ul>
+    </form>
+</div>
+
+<div id="password_change">
+    <div class="toolbar">
+        <h1>Change Password</h1>
+        <a class="back" href="#">Back</a>
+        {% merchant_right_button venue_id domain_name %}
+    </div>
+    <form id="password-change" method="post" action="http://{{ domain_name }}/accounts/password_change_done2/{{ venue_id }}/">
+        <ul class="edgetoedge">
+            <li class="sep">Old Password:</li>
+            <li><input type="password" name="old_password" placeholder="Enter old password" id="id_old_password" class="rightinput" /></li>
+            <li class="sep">New Password:</li>
+            <li><input type="password" name="new_password1" placeholder="Enter new password" id="id_new_password1" class="rightinput" /></li>
+            <li class="sep">Confirm New Password:</li>
+            <li><input type="password" name="new_password2" placeholder="Repeat new password" id="id_new_password2" class="rightinput" /></li>
+            <li><a href="#" style="margin:0 10px;color:rgba(0,0,0,.9)" class="submit whiteButton">Change</a></li>
+        </ul>
+    </form>
+</div>

@@ -1,0 +1,52 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/trunk/webroot/css/chess
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-05-24T07:08:15.529824Z
+15
+aerosmile2000
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3d9eadb-11b5-4226-93e5-e54cb0732d21
+
+referee.css
+file
+
+
+
+
+2010-08-01T23:05:02.000000Z
+ab606596496b8e8bdff42b96e226ad30
+2010-05-24T07:08:15.529824Z
+15
+aerosmile2000
+
+chess.css
+file
+
+
+
+
+2010-08-01T23:05:02.000000Z
+ed43c8fe803d32f79cbde3d4ca196f86
+2010-05-24T07:08:15.529824Z
+15
+aerosmile2000
+

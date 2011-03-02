@@ -1,0 +1,79 @@
+8
+
+dir
+113
+http://skipola3.svn.beanstalkapp.com/skipola3/merchant
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-11-27T05:58:13.436653Z
+113
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+views.py
+file
+117
+
+
+
+2010-11-29T23:32:14.000000Z
+c8b1cc2ee7f4eb1608c39e0b114dba8d
+2010-11-29T23:35:14.166860Z
+117
+skipola3
+
+__init__.py
+file
+
+
+
+
+2010-11-27T05:03:30.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2010-11-27T05:58:13.436653Z
+113
+skipola3
+
+tests.py
+file
+
+
+
+
+2010-11-27T05:03:30.000000Z
+1fde9e174e80f7680d95dc905a3533a3
+2010-11-27T05:58:13.436653Z
+113
+skipola3
+
+models.py
+file
+
+
+
+
+2010-11-27T05:03:30.000000Z
+8c4eb991c6dca757bdd77f539092e29b
+2010-11-27T05:58:13.436653Z
+113
+skipola3
+
+templatetags
+dir
+
+urls.py
+file
+115
+
+
+
+2010-11-29T23:31:00.000000Z
+d7d431dc8a01cca1c1e8dcdaf6e6d9cf
+2010-11-28T21:43:21.863477Z
+115
+skipola3
+

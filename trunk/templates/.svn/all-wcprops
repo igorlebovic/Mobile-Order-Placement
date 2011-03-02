@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/skipola3/!svn/ver/23/trunk/templates
+END
+newtheme.html
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/skipola3/!svn/ver/2/trunk/templates/newtheme.html
+END
+place_page.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/skipola3/!svn/ver/9/trunk/templates/place_page.html
+END
+listthemes.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/skipola3/!svn/ver/2/trunk/templates/listthemes.html
+END
+simplegeo.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/skipola3/!svn/ver/15/trunk/templates/simplegeo.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/skipola3/!svn/ver/18/trunk/templates/home.html
+END
+debugging.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/skipola3/!svn/ver/8/trunk/templates/debugging.html
+END
+welcome.html
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/skipola3/!svn/ver/2/trunk/templates/welcome.html
+END
+empty.html
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/skipola3/!svn/ver/15/trunk/templates/empty.html
+END
+autologinclient.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/skipola3/!svn/ver/11/trunk/templates/autologinclient.html
+END
+index_jqtouch.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/skipola3/!svn/ver/22/trunk/templates/index_jqtouch.html
+END
+chess.html
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/skipola3/!svn/ver/16/trunk/templates/chess.html
+END
+simplegeo2.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/skipola3/!svn/ver/13/trunk/templates/simplegeo2.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/skipola3/!svn/ver/2/trunk/templates/index.html
+END
+edittheme.html
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/skipola3/!svn/ver/2/trunk/templates/edittheme.html
+END
+base.html
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/skipola3/!svn/ver/2/trunk/templates/base.html
+END
+messagesearch.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/skipola3/!svn/ver/2/trunk/templates/messagesearch.html
+END

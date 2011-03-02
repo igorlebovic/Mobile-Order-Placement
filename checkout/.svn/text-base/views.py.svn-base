@@ -1,0 +1,160 @@
+from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.core import urlresolvers
+from django.http import HttpResponse, HttpResponseRedirect
+
+from speeqeweb.checkout.forms import CheckoutForm, CheckoutFormCash
+from speeqeweb.checkout.models import Order, OrderItem
+from speeqeweb.checkout import checkout
+from speeqeweb.cart import cart
+from speeqeweb.catalog.models import Category, Product, ProductReview, Venue
+from speeqeweb.cart.models import CartItem
+
+from speeqeweb.accounts import profile
+from django.contrib.auth.decorators import login_required
+from django.core.cache import cache
+from speeqeweb.settings import CACHE_TIMEOUT
+from speeqeweb.catalog.forms import ProductAddToCartForm, ProductReviewForm
+from speeqeweb.stats import stats
+
+
+def show_order(request, venue_id, template_name="checkout/show_order.html"):
+    postdata = request.POST.copy()
+    postdata.__setitem__('venue', venue_id)
+    success=True
+    form_message='Overview of pending, accepted, and processed orders.'
+    form_title='My Orders'
+
+    if postdata['submit'] == 'order_accepted':
+        form_message='Order accepted by merchant.'
+        form_title='Order Accepted'
+        if cart.get_cart_items2_1(request, venue_id):
+            response = checkout.merchant_order_accepted(request, venue_id)
+        if cart.get_cart_items2_2(request, venue_id):
+            response = checkout.merchant_order_finalized(request, venue_id)
+        if cart.get_cart_items2_3(request, venue_id):
+            response = checkout.merchant_order_paid(request, venue_id)
+        skip_refresh = False
+
+    if postdata['submit'] == 'cash':
+        request.session['billing_name'] = request.POST.get('billing_name')
+        request.session['email'] = request.POST.get('email')
+        request.session['phone'] = request.POST.get('phone')
+        request.session['payment_method'] = request.POST.get('cash')
+
+        form = CheckoutFormCash(postdata)
+        if form.is_valid():
+            form_message='Order sent. Waiting for confirmation.'
+            form_title='Order Sent'
+            response = checkout.process(request, venue_id)
+            order_number = response.get('order_number',0)
+            error_message = response.get('message','')
+            skip_refresh = False
+            if order_number:
+                request.session['order_number'] = order_number
+        else:
+            form_message='Error: incomplete info.'
+            form_title='Info Error'
+            success=False
+            ferrors=form.errors
+            skip_refresh = True
+    if postdata['submit'] == 'Remove':
+        cart.remove_from_cart(request, venue_id)
+        form_message='Order cancelled. Thank you for shopping'
+        form_title='Order Cancelled'
+        skip_refresh = False
+    if postdata['submit'] == 'Update':
+        cart.update_cart(request, venue_id)
+        form_message='Order updated. Waiting for confirmation.'
+        form_title='Order Updated'
+        skip_refresh = False
+    if postdata['submit'] == 'New':
+        skip_refresh = True
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+
+def modify_order(request, product_slug, template_name="checkout/modify_order.html"):
+    """ view for each product page """
+    postdata = request.POST.copy()
+    item_id = postdata['item_id']
+    product_cache_key = request.path
+    # try to get product from cache
+    p = cache.get(product_cache_key)
+    # if a cache miss, fall back on db query
+    if not p:
+        p = get_object_or_404(Product.active, slug=product_slug)
+        # store item in cache for next time
+        cache.set(product_cache_key, p, CACHE_TIMEOUT)
+    categories = p.categories.filter(is_active=True)
+    page_title = p.name
+    meta_keywords = p.meta_keywords
+    meta_description = p.meta_description
+    venue_id = categories[0].venue.id
+    # evaluate the HTTP method, change as needed
+    #create the unbound form. Notice the request as a keyword argument
+    form = ProductAddToCartForm(request=request, label_suffix=':')
+    # assign the hidden input the product slug
+    form.fields['product_slug'].widget.attrs['value'] = product_slug
+    # set test cookie to make sure cookies are enabled
+    request.session.set_test_cookie()
+    stats.log_product_view(request, p)
+    # product review additions, CH 10
+    product_reviews = ProductReview.approved.filter(product=p).order_by('-date')
+    review_form = ProductReviewForm()
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+    
+
+def ajax_order_accepted(request, venue_id, template_name="checkout/order_accepted_ajax.json"):
+    postdata = request.POST.copy()
+    postdata.__setitem__('venue', venue_id)
+    if cart.get_cart_items2_1(request, venue_id):
+        response = checkout.merchant_order_accepted(request, venue_id)
+    elif cart.get_cart_items2_2(request, venue_id):
+        response = checkout.merchant_order_finalized(request, venue_id)
+    else:
+        response = checkout.merchant_order_paid(request, venue_id)
+    cart_items2_1 = cart.get_cart_items2_1(request, venue_id)
+    cart_items2_2 = cart.get_cart_items2_2(request, venue_id)
+    cart_items2_3 = cart.get_cart_items2_3(request, venue_id)
+    orders = Order.objects.filter(user=request.user.id, venue=venue_id).order_by('-id')
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+
+def ajax_order_lookup(request, venue_id, template_name="checkout/order_accepted_ajax.json"):
+    postdata = request.POST.copy()
+    postdata.__setitem__('venue', venue_id)
+    cart_items2_1 = cart.get_cart_items2_1(request, venue_id)
+    cart_items2_2 = cart.get_cart_items2_2(request, venue_id)
+    cart_items2_3 = cart.get_cart_items2_3(request, venue_id)
+    orders = Order.objects.filter(user=request.user.id, venue=venue_id).order_by('-id')
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+
+def ajax_merchant_lookup(request, venue_id, template_name="checkout/order_accepted_ajax.json"):
+    postdata = request.POST.copy()
+    postdata.__setitem__('venue', venue_id)
+    cart_items2_1 = cart.merchant_cart_items2_1(request, venue_id)
+    cart_items2_2 = cart.merchant_cart_items2_2(request, venue_id)
+    cart_items2_3 = cart.merchant_cart_items2_3(request, venue_id)
+    orders = Order.objects.filter(user=request.user.id, venue=venue_id).order_by('-id')
+    return render_to_response(template_name, locals(), context_instance=RequestContext(request))
+
+
+def ajax_merchant_response(request, venue_id):
+    postdata = request.POST.copy()
+    postdata.__setitem__('venue', venue_id)
+    response = checkout.merchant_order_accepted(request, venue_id)
+    return HttpResponse(response, mimetype="text/xml")
+
+    
+def ajax_store_jid(request):
+    myJid = request.POST.get('jid')
+    request.session['jid_session'] = myJid
+    return HttpResponse(myJid, mimetype="text/xml")
+
+
+def ajax_store_anonym(request):
+    anonym = request.POST.get('anonymous')
+    request.session['anonymous'] = anonym
+    return HttpResponse(anonym, mimetype="text/xml")

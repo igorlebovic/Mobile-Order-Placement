@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/skipola3/!svn/ver/69/templates/registration
+END
+password_change_done.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/skipola3/!svn/ver/122/templates/registration/password_change_done.html
+END
+order_history.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/skipola3/!svn/ver/125/templates/registration/order_history.html
+END
+order_details.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/skipola3/!svn/ver/122/templates/registration/order_details.html
+END
+register.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/skipola3/!svn/ver/122/templates/registration/register.html
+END
+account_info_result.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/skipola3/!svn/ver/125/templates/registration/account_info_result.html
+END
+account_info.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/skipola3/!svn/ver/125/templates/registration/account_info.html
+END
+logged_out.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/skipola3/!svn/ver/122/templates/registration/logged_out.html
+END

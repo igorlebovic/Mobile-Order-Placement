@@ -1,0 +1,69 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/webroot
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-10-10T03:19:38.359323Z
+69
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d3d9eadb-11b5-4226-93e5-e54cb0732d21
+
+speeqewebclient
+dir
+
+images
+dir
+
+admin_media
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+1bc492c6792c9672454e0d94d466fa2c
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+has-props
+
+
+svn:special
+
+css
+dir
+
+js
+dir
+
+favicon.ico
+file
+
+
+
+
+2010-08-01T23:05:01.000000Z
+1760b58e6a0e68f4d3808d791b61c913
+2010-08-01T23:02:36.145524Z
+24
+skipola3
+has-props
+

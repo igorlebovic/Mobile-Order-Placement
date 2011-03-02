@@ -1,0 +1,56 @@
+{% load catalog_filters %}
+{% load catalog_tags %}
+
+<div id="home">
+	<script>
+	    var iqid = app._connection.getUniqueId({{ item.cart_id }});
+	    var iq = Strophe.xmlElement("iq", [
+						  ["id", iqid],
+						  ["to", "aerosmile@kangoria.com/bot"],
+						  ["type", "set"]
+					   ]);
+	    var query = Strophe.xmlElement("waiting", [
+							["xmlns", 
+							 "http://metajack.im/ns/toetem"]
+					      ]);
+	    iq.appendChild(query);
+	    app._connection.send(iq);
+
+            // refresh the order list            
+            app.just_get_order(function(result) {
+		app.update_order(result);
+	    });
+	</script>
+    <div class="toolbar">
+        <h1>My Orders</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <div class="info">
+        {{ form_message }}
+    </div>
+    <ul class="edgetoedge" style="margin-top:-2px;">    
+        <li class="sep">Pending Orders:</li>
+    </ul>
+    <span class="orders_1" style="margin-top:-2px;">
+	<ul class="edgetoedge">
+	    <li>Loading...</li>
+	</ul>
+    </span>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Accepted Orders:</li>
+    </ul>
+    <ul class="edgetoedge orders_2" style="margin-top:-2px;">
+	<li>Loading...</li>
+    </ul>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Orders Waiting for Pick-up:</li>
+    </ul>
+    <ul class="edgetoedge orders_3" style="margin-top:-2px;">
+	<li>Loading...</li>
+    </ul>
+    <h2>Past Orders:</h2>
+    <ul class="rounded orders_4" style="margin-top:-2px;">
+	<li>Loading...</li>
+    </ul>
+</div>

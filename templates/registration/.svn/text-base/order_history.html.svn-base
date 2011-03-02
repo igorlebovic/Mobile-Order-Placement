@@ -1,0 +1,20 @@
+{% load catalog_tags %}
+
+<div id="order-history">
+    <div class="toolbar">
+        <h1>Order History</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <ul class="edgetoedge">
+	{% if orders %}
+		{% for order in orders %}
+			<li>
+                            Order #{{ order.id }} - {{ order.date|date }}
+                        </li>
+		{% endfor %}
+	{% else %}
+		<li>You have no past orders.</li>
+	{% endif %}
+    </ul>
+</div>

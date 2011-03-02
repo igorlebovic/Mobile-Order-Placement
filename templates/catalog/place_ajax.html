@@ -1,0 +1,202 @@
+{% load catalog_tags %}
+
+<div id="home">
+    <div class="toolbar">
+        <h1>{{ v.name }}</h1>
+        <a class="button back" href="#">Back</a>
+    </div>
+    <div class="info">
+        Welcome to {{ v.name }}. Enjoy!
+        <br/>
+    </div>
+    {% if support_orders %}
+        <ul class="edgetoedge" style="margin-top:-2px;">
+            <li class="sep">Order Placement:</li>
+        </ul>
+        <form id="categories" action="http://{{ domain_name }}/category/{{ v.id }}/" method="POST" class="form" style="margin-top:-2px;">
+            <ul class="edgetoedge">
+                <li>
+                    <a href="#" class="submit">Place Your Order</a>
+                </li>
+            </ul>
+        </form>
+        <form id="cart" action="http://{{ domain_name }}/cart/show_cart/{{ v.id }}/" method="POST" class="form, cart" style="margin-top:-2px;">
+            <ul class="edgetoedge">
+                <input type="hidden" name="submit" value="New" />
+                <li><a href="#" class="submit">Cart</a></li>
+            </ul>
+        </form>
+        <form id="orders" method="post" action="http://{{ domain_name }}/checkout/show_order/{{ venue_id }}/" class="form, cart" style="margin-top:-2px;">
+            <ul class="edgetoedge">
+          <input type="hidden" name="submit" value="New" />
+          <li><a href="#" class="submit">Orders</a></li>
+            </ul>
+        </form>
+    {% endif %}
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Social Interactions:</li>
+        <li><a href="#chatscreen">Chat Room</a></li>
+        <li><a href="#people">People Online</a></li>
+    </ul>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">My Info:</li>
+    </ul>
+    {% if support_orders %}
+        <form id="history" action="http://{{ domain_name }}/accounts/order_history/{{ venue_id }}/" method="POST" class="form"  style="margin-top:-2px;">
+            <ul class="edgetoedge">
+                <li><a href="#" class="submit">Order History</a></li>
+            </ul>
+        </form>
+    {% endif %}
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li><a href="#myaccount">My Account</a></li>
+    </ul>
+    <ul class="edgetoedge" style="margin-top:-2px;">
+        <li class="sep">Return to Home:</li>
+        <li><a href="http://{{ domain_name }}/" target="_blank">Show all Restaurants</a></li>
+    </ul>
+</div>
+
+<div id="myaccount">
+    <div class="toolbar">
+        <h1>My Account</h1>
+        <a class="button back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <form id="logout" action="/accounts/logout" method="POST" class="form" style="margin-bottom:-2px;">
+        <ul class="edgetoedge">
+            <li class="sep"><label for="username">Logged in as: {{ username }}</label></li>
+            <li><a href="#" class="submit">Log Out</a></li>
+        </ul>
+    </form>
+    <ul class="edgetoedge">
+        <li><a href="#password_change">Password Change</a></li>
+    </ul>
+    <form id="account-info" action="/accounts/account_info/{{ venue_id }}/" method="POST" class="form" style="margin-top:-2px;">
+        <ul class="edgetoedge">
+            <li><a href="#" class="submit">Account Information</a></li>
+        </ul>
+    </form>
+</div>
+
+<div id="log-in">
+    <div class="toolbar">
+        <h1>Account</h1>
+        <a class="button back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <form id="layer1_form" method="post" action="http://{{ domain_name }}/accounts/ajax_login/">
+        <ul class="edgetoedge">
+            <li class="sep">Log in:</li>
+            <li><input type="text" name="username" placeholder="Enter login" id="login" class="rightinput" /></li>
+            <li class="sep">Password:</li>
+            <li><input type="password" name="password" placeholder="Enter password" id="password" class="rightinput" /></li>
+            <li class="sep"><div class='error' id='form_message' ></div></li>
+            <li><a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" id="layer1_form_submit" class="submit whiteButton">Log in</a></li>
+        </ul>
+    </form>
+</div>
+
+<div id="password_change">
+    <div class="toolbar">
+        <h1>Change Password</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <form id="password-change" method="post" action="http://{{ domain_name }}/accounts/password_change_done2/">
+        <ul class="edgetoedge">
+            <li class="sep">Old Password:</li>
+            <li><input type="password" name="old_password" placeholder="Enter old password" id="id_old_password" class="rightinput" /></li>
+            <li class="sep">New Password:</li>
+            <li><input type="password" name="new_password1" placeholder="Enter new password" id="id_new_password1" class="rightinput" /></li>
+            <li class="sep">Confirm New Password:</li>
+            <li><input type="password" name="new_password2" placeholder="Repeat new password" id="id_new_password2" class="rightinput" /></li>
+        </ul>
+	<a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Change</a>
+    </form>
+</div>
+
+<div id="register">
+    <div class="toolbar">
+        <h1>Register</h1>
+        <a class="back" href="#">Back</a>
+    </div>
+    <form id="register-form" method="post" action="http://{{ domain_name }}/accounts/register/">
+        <ul class="edgetoedge">
+            <li class="sep">Username:</li>
+            <li><input type="text" name="username" id="id_username" maxlength="30" placeholder="Enter username" class="rightinput" /></li>
+            <li class="sep">Password:</li>
+            <li><input type="password" name="password1" placeholder="Enter password" id="id_password1" class="rightinput" /></li>            
+            <li class="sep">Password Confirmation:</li>
+            <li><input type="password" name="password2" placeholder="Repeat password" id="id_password2" class="rightinput" /></li>
+            <li class="sep">Email:</li>
+            <li><input type="text" name="email" placeholder="Enter email address" id="id_email" maxlength="50" class="rightinput" /></li>
+            <li><a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Register</a></li>
+        </ul>
+    </form>
+</div>
+
+<div id="chatscreen">
+    <div class="toolbar">
+        <h1>Chat</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    <div id="wrapper">
+        <div id="chat">
+            <div id="chatWindow_chatpane" class='direction-up'>
+                <div id="post_template" style="display: none;">
+                  <!-- This div is used to post messages. They will always show in the
+                       chatWindow_chatpan div. Leave it hidden. -->
+                    <div id="chatpane_post" class="post">
+                        <div class="postmark">
+                            <div class="message_block">
+                                <p class="user-message">
+                                    <span id='messagepost'>
+                                        <!--The message begins -->
+                                        <!--The message ends -->
+                                    </span><br />
+                                    <small id="message_time_stamp" class="date">
+                                        01/01/08
+                                        <!--Message Time Stamp (don't change id)-->
+                                    </small>
+                                </p>
+                                <p class="user-info">
+                                    <span id="message_user_name" class="message_user_name">
+                                        <!--User name -->
+                                    </span> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div id="chatbox">
+            <textarea id="send_chat_message" cols="30" rows="1">type and hit enter </textarea>
+            <a href="#post" id="send_chat"><span>Post</span></a>
+        </div>
+    </div>
+</div>
+
+<div id="people">
+    <div class="toolbar">
+        <h1>People</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>      
+    <span id="online">
+        <ul id="roster_item" class="rounded">
+            <!--This li is used to list users in the room. Leave it hidden. -->
+            <li id="rosteritemtemplate" class="arrow" style="display: none;">
+                <div class="useronline">
+                <!--User Avatar -->
+                    <img id="onlineavatar" alt="displaynick" src="/avatar-service/lookup/?sha1=f2f8ab835b10d66f9233518d1047f3014b3857cf" />
+                    <div class="rostername">
+                        <span id="roster_user_name"></span>@<span id="roster_user_domain">speeqe.com</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </span>
+</div>

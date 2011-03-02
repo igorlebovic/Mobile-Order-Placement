@@ -1,0 +1,19 @@
+{% load catalog_tags %}
+{% load cache %}
+
+<div id="category">
+    <div class="toolbar">
+        <h1>Menu</h1>
+        <a class="back" href="#">Back</a>
+        {% upper_right_button venue_id domain_name %}
+    </div>
+    {% with active_categories as cats %}
+        {% for c in cats %}
+            <form action="http://{{ domain_name }}/show_product_list/{{ c.slug }}/" method="POST" class="form" style="margin-bottom:-2px;">
+                <ul class="edgetoedge">
+                    <li><a href="#" class="submit">{{ c.name }}</a></li>
+                </ul>
+            </form>
+        {% endfor %}
+    {% endwith %}
+</div>

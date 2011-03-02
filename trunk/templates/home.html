@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Skipola</title>
+    <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <style type="text/css" media="screen">@import "/css/home.css";</style>
+    <script type="text/javascript" src="/js/googlemaps.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/json2.js"></script>
+    <script type="text/javascript" src="/js/home.js"></script>
+  </head>
+  <body onload="init()">
+    <a id="homeButton" class="button" href="#vertical_list">Home</a>
+    <a id="mapButton" class="button" href="" onclick="javasript:show_map_results()">Map</a>
+    <h1 id="pageTitle"></h1>
+    <ul id="vertical_list" class="iphonestyling" title="Skipola" selected="true">
+      <!-- <li><a class="vertical" onclick="get_location()">Find your location</a></li> -->
+    </ul>
+    <div id="map" title="Map">
+      <div style="position:relative; width: 320px; height: 419px;">
+       <div id="map_canvas" style="width: 320px; height: 419px;">
+       </div>
+      </div>
+    </div>
+    <ul id="results" class="iphonestyling" title="Search Results">
+    </ul>
+  </body>
+</html>

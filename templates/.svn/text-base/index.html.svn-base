@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% load splib %}
+{% load catalog_tags %}
+
+{% block jquery %}
+{% endblock %}
+
+{% block content %}
+<div id="home">
+    <div class="toolbar">
+        <h1>Skipola</h1>
+    </div>
+    {% if user.is_authenticated %}
+        <div class="info" style="font-weight: normal;">Welcome to Skipola!
+        </div>
+        <ul class="edgetoedge" style="margin-top:-2px;">
+            <li class="sep">Claimed Places:</li>
+        </ul>
+        <ul id="results-full" class="edgetoedge" style="margin-top:-2px;">
+            <li>Loading...</li>
+        </ul>    
+        <ul class="edgetoedge" style="margin-top:-2px;">
+            <li class="sep">Unclaimed Places:</li>
+        </ul>
+        <ul id="results-limited" class="edgetoedge" style="margin-top:-2px;">
+            <li>Loading...</li>
+        </ul>
+    {% else %}
+        <div class="info">
+            You have to log in or register to access this screen.
+            <br/>
+        </div>
+        <ul class="edgetoedge" style="margin-top:-2px;">
+            <li class="sep">Log in or register:</li>
+            <li><a href="#log-in">Log in</a></li>
+            <li><a href="#register">Register</a></li>        
+        </ul>
+    {% endif %}
+</div>
+
+<div id="log-in">
+    <div class="toolbar">
+        <h1>Account</h1>
+        <a class="button back" href="#">Back</a>
+    </div>
+    <form id="layer1_form" method="post" action="http://{{ domain_name }}/accounts/ajax_login/">
+        <ul class="edgetoedge">
+            <li class="sep">Log in:</li>
+            <li><input type="text" name="username" placeholder="Enter login" id="login" class="rightinput" /></li>
+            <li class="sep">Password:</li>
+            <li><input type="password" name="password" placeholder="Enter password" id="password" class="rightinput" /></li>
+            <li class="sep"><div class='error' id='form_message' ></div></li>
+            <li><a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" id="layer1_form_submit" class="submit whiteButton">Log in</a></li>
+        </ul>
+    </form>
+</div>
+
+<div id="register">
+    <div class="toolbar">
+        <h1>Register</h1>
+        <a class="back" href="#">Back</a>
+    </div>
+    <form id="register-form" method="post" action="http://{{ domain_name }}/accounts/register/">
+        <ul class="edgetoedge">
+            <li class="sep">Username:</li>
+            <li><input type="text" name="username" id="id_username" maxlength="30" placeholder="Enter username" class="rightinput" /></li>
+            <li class="sep">Password:</li>
+            <li><input type="password" name="password1" placeholder="Enter password" id="id_password1" class="rightinput" /></li>            
+            <li class="sep">Password Confirmation:</li>
+            <li><input type="password" name="password2" placeholder="Repeat password" id="id_password2" class="rightinput" /></li>
+            <li class="sep">Email:</li>
+            <li><input type="text" name="email" placeholder="Enter email address" id="id_email" maxlength="50" class="rightinput" /></li>
+            <li><a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton">Register</a></li>
+        </ul>
+    </form>
+</div>
+
+<div id="chatscreen">
+    <div class="toolbar">
+        <h1>Chat</h1>
+        <a class="back" href="#">Back</a>
+    </div>
+    <div id="wrapper">
+        <div id="chat" style="padding:10px 20px;">
+            <div id="chatWindow_chatpane" class='direction-up'>
+                <div id="post_template" style="display: none;">
+                  <!-- This div is used to post messages. They will always show in the
+                       chatWindow_chatpan div. Leave it hidden. -->
+                    <div id="chatpane_post" class="post">
+                        <div class="postmark">
+                            <div class="message_block">
+                                <p class="user-message">
+                                    <span id='messagepost'>
+                                        <!--The message begins -->
+                                        <!--The message ends -->
+                                    </span><br />
+                                    <small id="message_time_stamp" class="date">
+                                        01/01/08
+                                        <!--Message Time Stamp (don't change id)-->
+                                    </small>
+                                </p>
+                                <p class="user-info">
+                                    <span id="message_user_name" class="message_user_name">
+                                        <!--User name -->
+                                    </span> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div id="chatbox">
+            <textarea id="send_chat_message" cols="30" rows="1">type and hit enter </textarea>
+            <a href="#post" id="send_chat"><span>Post</span></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

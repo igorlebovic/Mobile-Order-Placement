@@ -1,0 +1,40 @@
+8
+
+dir
+69
+http://skipola3.svn.beanstalkapp.com/skipola3/webroot/css/chess
+http://skipola3.svn.beanstalkapp.com/skipola3
+
+
+
+2010-08-25T06:09:58.414872Z
+33
+skipola3
+
+
+svn:special svn:externals svn:needs-lock
+
+referee.css
+file
+
+
+
+
+2010-08-25T03:19:07.000000Z
+acd4795db86da3211290074315dae26f
+2010-08-25T06:09:58.414872Z
+33
+skipola3
+
+chess.css
+file
+
+
+
+
+2010-10-12T05:54:48.000000Z
+ed43c8fe803d32f79cbde3d4ca196f86
+2010-08-25T06:09:58.414872Z
+33
+skipola3
+

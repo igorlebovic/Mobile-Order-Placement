@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/skipola3/!svn/ver/113/merchant
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/117/merchant/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/skipola3/!svn/ver/113/merchant/__init__.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/skipola3/!svn/ver/113/merchant/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/skipola3/!svn/ver/113/merchant/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/skipola3/!svn/ver/115/merchant/urls.py
+END
